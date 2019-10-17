@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2019
-lastupdated: "2019-05-01"
+lastupdated: "2019-10-17"
 
 keywords: service ID, service ID API key, lock service ID API key, delete service ID API key
 
@@ -48,7 +48,7 @@ Create an API key to associate with a service ID.
 For security reasons, the API key is only available to be copied or downloaded at the time of creation. If the API key is lost, you must create a new API key.
 {: note}
 
-To create an API key for a service ID using the CLI, you can use the [ibmcloud iam service-api-key-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_key_create) command.
+To create an API key for a service ID using the CLI, you can use the [ibmcloud iam service-api-key-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_service_api_key_create) command.
 ```
 ibmcloud iam service-api-key-create NAME SERVICE_ID [-d, --description DESCRIPTION] [--file FILE] [-f, --force]
 ```
@@ -64,7 +64,8 @@ You can update an API key by editing the name or description used to identify th
 3. Click **API keys**.
 4. From the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, click **Edit name & description**.
 
-To update an API key for a service ID using the CLI, you can use the [ibmcloud iam service-api-key-update](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_key_update) command.
+To update an API key for a service ID using the CLI, you can use the [ibmcloud iam service-api-key-update](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_service_api_key_update) command.
+
 ```
 ibmcloud iam service-api-key-update NAME SERVICE_ID  [-n, --name NEW_sNAME] [-d, --description DESCRIPTION] [-v, --version VERSION] [-f, --force]
 ```
@@ -135,7 +136,7 @@ You can delete an API key that is associated with a service ID. However, deletin
 4. Click **API keys**.
 5. From the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, click **Delete**.
 
-To delete an API key for a service ID using the CLI, you can use the [ibmcloud iam service-api-key-delete](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_key_delete) command.
+To delete an API key for a service ID using the CLI, you can use the [ibmcloud iam service-api-key-delete](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_service_api_key_delete) command.
 ```
 ibmcloud iam service-api-key-delete NAME SERVICE_ID [-f, --force]
 ```
