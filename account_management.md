@@ -134,7 +134,7 @@ You can give users access to view private services in the catalog or change the 
 ### Enterprise
 {: #enterprise-account-management}
 
-You can use the enterprise service to assign users access to to manage an enterprise by creating accounts within the enterprise, assigning accounts to account groups, naming account groups, and more. This type of policy works only if it is assigned within the enterprise account. 
+You can use the enterprise service to assign users access to manage an enterprise by creating accounts within the enterprise, assigning accounts to account groups, naming account groups, and more. This type of policy works only if it is assigned within the enterprise account. 
 
 | Roles | Actions |
 |:-------|----------|
