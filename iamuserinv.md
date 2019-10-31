@@ -123,7 +123,13 @@ curl -X POST \
 ## Adding VPN-only users
 {: #add-vpn-only}
 
-As the account owner or a user with the Manage user classic infrastructure permission, you can add a VPN-only user.
+Any user with the following permissions can add a VPN-only user:
+
+- For Cloud Foundry, you must have the Manager organization role. 
+- For classic infrastructure, you must have the Manage Users permission on the account.
+- For IAM access, you must have the Administrator or Editor role on the user management account management service. 
+
+To add a VPN-only user, use the following steps:
 
 1. On the Users page, click **Add VPN-only user**.
 2. Enter the personal information details for the user.
