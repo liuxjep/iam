@@ -125,7 +125,7 @@ The following example shows how you can create a policy that gives a user access
                 },
                 {
                     "name": "resourceType",
-                    "operator:" "stringEquals"
+                    "operator": "stringEquals"
                     "value": "topic",
                 },
                 {
