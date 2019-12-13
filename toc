@@ -8,7 +8,6 @@ Managing identity and access
     quickstart.md
     manageaccess.md
     index.md
-    iam-intro-video.md
 
     {: .topicgroup}
     User roles and permissions
