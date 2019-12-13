@@ -36,14 +36,15 @@ Managing identity and access
 
     {: .topicgroup}
     Managing access
+        groups.md
         mngiam.md
+        wildcard.md
         account_management.md
+        public_access.md
         mngcf.md
         mnginfra.md
-        migrated_permissions.md
-        groups.md
-        public_access.md
         accessgroup_rules.md
+        migrated_permissions.md
         userlist.md
         assign-enterprise-access.md
 

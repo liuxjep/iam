@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2019
-lastupdated: "2019-05-01"
+lastupdated: "2019-12-13"
 
 keywords: service ID, service ID access, managing access for service IDs
 
@@ -34,40 +34,37 @@ To assign access to all resources in a resource group or to just one service wit
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. Select the service ID from the table that you want to assign a service policy for.
-3. Click **Access policies**.
+3. Click **Access policies** > **Assign access**.
 4. Click **Assign access**.
-5. Select to **Assign by resource group**.
-6. Select a resource group.
-7. Choose a role for the **Assign access to resource group** field. This option allows the user to view the resource group on their resource list, edit the resource group name, or manage user access to the group. You can select **No access**, if you want the user to have access to only the resource that you specify and not the group that it's assigned to.
-8. Select a service within the resource group, or select to provide access to all services within the selected group.
-9. Choose any combination of roles to assign the wanted access for the user. This access applies only to the resources that you selected for the policy. It doesn't give access to the actual container that is the resource group.
-10. Select **Assign**.
+5. (Optional) Add users to an access group. Click **Add** for the access group that you want the users to belong to.
+6. (Optional) Manually assign users access.
+  1. Expand the Assign users additional access, and click **IAM services**.
+  2. Select the option for all services or just a specific service, and then select the resource group.
+  3. Choose any combination of roles to assign to the user, and click **Add** > **Assign**.
 
 To assign access to an individual resource in the account, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. Select the service ID from the table that you want to assign a service policy for.
-3. 3. Click **Access policies**.
-4. Click **Assign access**.
-5. Select to **Assign by resource**.
-6. Select a service.
-7. Select **All current regions** or a specific region, if your are prompted.
-8. Select **All current service instances** or select a specific service instance.
-9. Depending on the service that you selected, you might see the following fields. If you don't enter values for these fields, the policy is assigned at the service instance level instead of the bucket level.
-    * **Resource type**: Enter **bucket**.
-    * **Resource ID**: Enter the name of your bucket.
-10. Choose any combination of roles to assign the wanted access for the user.
-11. Select **Assign**.
+3. Click **Access policies** > **Assign access**.
+4. (Optional) Add users to an access group. Click **Add** for the access group that you want the users to belong to.
+5. (Optional) Manually assign users access.
+  1. Expand the Assign users additional access, and click **IAM services**.
+  2. Select the option for all services or just a specific service.
+  3. Select a region.
+  4. Choose any combination of roles to assign to the user, and click **Add** > **Assign**.
 
 To assign access to an individual account management services or all account management services, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and then select **Service IDs**.
 2. Select the service ID from the table that you want to assign a service policy for.
-3. Click **Access policies**.
-4. Click **Assign access**.
-5. Select to assign access to **Account Management Services**
-6. Select **All Account Management Services** or select a specific account management service.
-7. Select any combination of roles to assign the wanted access.
+3. Click **Access policies** > **Assign access**.
+4. (Optional) Add the service ID to an access group. 
+5. (Optional) Manually assign access.
+  1. Expand the Assign service ID additional access, and click **Account management**.
+  2. Select the option for all account management services or select a specific service.
+  3. Select the resource type.
+  4. Choose any combination of roles to assign, and click **Add** > **Assign**.
 
 You might receive a message that a policy exists for the details that you've selected. If a policy with the exact details and roles is being created, you're prompted to make changes to the new policy since duplicate policies aren't allowed. If you're creating a policy with the same details but different role assignments as an existing policy, you're prompted to review and update the existing policy with the role assignments that you want to assign.
 {: tip}

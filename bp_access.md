@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2019
-lastupdated: "2019-01-28"
+lastupdated: "2019-12-13"
 
 keywords: advantage of access groups, access assignment process, assign access, best practice, access management, strategy
 
@@ -57,7 +57,7 @@ After you create an access group, you can add users and service IDs to the group
 
 A policy consists of a subject, target, and role. The subject in this case is the access group. The target is what you want the subject to access, such as a set of resources, a service instance, all services in the account, or all instances of a service. The role defines the level of access that is granted to a user.
 
-The most commonly used roles are viewer, editor, and administrator. The viewer role provides the least amount of access for viewing instances and resource groups in an account. The editor role has more access for creating, editing, deleting, and binding service instances. The administrator role includes everything for working with a service instance and can assign access to others. However, two different categories of roles are available to consider: platform and service. For more information about the roles that can be assigned, see the [IAM Cloud roles](/docs/iam?topic=iam-userroles#iamusermanrol).
+The most commonly used roles are viewer, editor, and administrator. The viewer role provides the least amount of access for viewing instances and resource groups in an account. The editor role has more access for creating, editing, deleting, and binding service instances. The administrator role includes everything for working with a service instance and can assign access to others. However, two different categories of roles are available to consider: platform and service. For more information about the roles that can be assigned, see the [IAM roles](/docs/iam?topic=iam-userroles#iamusermanrol).
 
 ## Assigning access to access groups
 {: #assigning-access}
@@ -66,11 +66,18 @@ You can organize resources in a resource group and users and service IDs into an
 
 1. Click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
 2. Select the name of the access group that you want to assign access.
-3. Select the **Access policies** tab, and then click **Assign access**. You have the following options for assigning access:
+3. Select the **Access policies** tab, and then click **Assign access**. 
+4.  Add one or more of the access options that you manage. You must assign at least one access option. For any access options that you don't add and configure, the default value of **No access** is assigned. Depending on the options that you are authorized to manage, you can assign the following types of access:
 
-  * **Assign access to resources within a resource group**: Use this option to give the two-part policy that is needed for users who create resources from the catalog and assign the resources to a resource group. When you use this option, you can give access to the resource group itself, and all resources in a particular resource group or just one service or instance in the resource group.
-  * **Assign access to resources**: Use this option to assign access to all IAM-enabled services across the account or to a single service in the account, but not to an instance level.
-  * **Assign access to Account Management Services**: Use this option to provide a user access to account management services as a way to delegate some of your account owner capabilities. For example, you can delegate the ability to view billing and usage, invite and remove users, manage access groups, manage catalog services, or manage service IDs. You can provide access to all account management services or just one.
+     * Select **Cloud Foundry**, choose an organization, then select a region to select a specific space, and assign a space role. An organization and space role are both required to add the access assignment to the invite.
+     * Select **Classic infrastructure**, and then choose from the three permission sets.
+     * Select **IAM services**, and then select the option for all services or just a specific service. Next, you can scope the access to the entire account, all resource groups, or just one resource group. Then, select all roles that apply. To view what actions are mapped to each role, click the **Actions for role** option to view a list of all actions that are mapped to a specific role. <br><br> Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information. 
+     
+         If you select the **Account** scope for the access policy, the user must already have the Viewer role or higher on the resource group or groups that contain the resources you want the user to have access to. Without a role on a resource group, the user can't work with the resource from the Resource list page in the console.
+         {: tip}
+     
+     * Select **Account management**, and then choose from the all account management services option or select a specific service. Then, select all roles that apply.
+5. Click **Add** > **Assign**. 
 
-Easily give multiple users administrator access to everything in an account by creating an access group and assigning two policies to it. To create the first policy, use the **Assign access to resources** option, and select **All Identity and Access enabled services** with the administrator role assigned. To create the second policy, use the **Assign access to Account Management Services** option, and select **All Account Management Services** with the administrator role assigned.
+Easily give multiple users administrator access to everything in an account by creating an access group and assigning two policies to it. To create the first policy, use the **IAM services** option, and select **All Identity and Access enabled services** with the administrator role assigned. To create the second policy, use the **Account Management** option, and select **All Account Management Services** with the administrator role assigned.
 {: tip}
