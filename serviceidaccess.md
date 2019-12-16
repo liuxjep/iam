@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2019
-lastupdated: "2019-12-13"
+lastupdated: "2019-12-17"
 
 keywords: service ID, service ID access, managing access for service IDs
 
@@ -32,41 +32,26 @@ If you delete or edit an existing policy for a service ID currently being used, 
 
 To assign access to all resources in a resource group or to just one service within a resource group, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
-2. Select the service ID from the table that you want to assign a service policy for.
-3. Click **Access policies** > **Assign access**.
-4. Click **Assign access**.
-5. (Optional) Add users to an access group. Click **Add** for the access group that you want the users to belong to.
-6. (Optional) Manually assign users access.
-  1. Expand the Assign users additional access, and click **IAM services**.
-  2. Select the option for all services or just a specific service, and then select the resource group.
-  3. Choose any combination of roles to assign to the user, and click **Add** > **Assign**.
+1. From the menu bar, click **Manage** > **Access (IAM)**, and select **Service IDs**.
+2. From the row for the service ID that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu > **Assign access**.
+3. Add the service ID to an access group. Click **Add** for the access group that you want the service ID to belong to.
+4. (Optional) Manually assign access.
+  1. Expand the Assign service IDs additional access section, and click **IAM services**. 
+  2. Select the option for all services or select a specific service.
+  3. Select the region.
+  3. Select any combination of roles to define the scope of access, and click **Add** > **Assign**.
 
-To assign access to an individual resource in the account, complete the following steps:
-
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
-2. Select the service ID from the table that you want to assign a service policy for.
-3. Click **Access policies** > **Assign access**.
-4. (Optional) Add users to an access group. Click **Add** for the access group that you want the users to belong to.
-5. (Optional) Manually assign users access.
-  1. Expand the Assign users additional access, and click **IAM services**.
-  2. Select the option for all services or just a specific service.
-  3. Select a region.
-  4. Choose any combination of roles to assign to the user, and click **Add** > **Assign**.
-
-To assign access to an individual account management services or all account management services, complete the following steps:
+To assign access to an individual account management service or all account management services, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and then select **Service IDs**.
-2. Select the service ID from the table that you want to assign a service policy for.
-3. Click **Access policies** > **Assign access**.
-4. (Optional) Add the service ID to an access group. 
-5. (Optional) Manually assign access.
-  1. Expand the Assign service ID additional access, and click **Account management**.
-  2. Select the option for all account management services or select a specific service.
-  3. Select the resource type.
-  4. Choose any combination of roles to assign, and click **Add** > **Assign**.
+2. From the row for the service ID that you want to assign a service policy for, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
+3. Add the service ID to an access group. Click **Add** for the access group that you want the service ID to belong to.
+4. (Optional) Manually assign access.
+  1. Expand the Assign service ID additional access section, and click **Account management**.
+  2. Select **All Account Management Services** or select a specific account management service.
+  3. Select any combination of roles to define the scope of access, and click **Add** > **Assign**.
 
-You might receive a message that a policy exists for the details that you've selected. If a policy with the exact details and roles is being created, you're prompted to make changes to the new policy since duplicate policies aren't allowed. If you're creating a policy with the same details but different role assignments as an existing policy, you're prompted to review and update the existing policy with the role assignments that you want to assign.
+You might receive a message that a policy exists for the details that were selected. If a policy with the exact details and roles is being created, you're prompted to make changes to the new policy since duplicate policies aren't allowed. If you're creating a policy with the same details but different role assignments as an existing policy, you're prompted to review and update the existing policy with the role assignments that you want to assign.
 {: tip}
 
 ## Editing existing access
