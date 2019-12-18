@@ -4,9 +4,9 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-03-25"
+lastupdated: "2019-12-19"
 
-keywords: public access, anonymous access
+keywords: public access, anonymous access, users, service IDs, public access group, enable, disable, manage, IAM
 
 subcollection: iam
 
@@ -19,24 +19,116 @@ subcollection: iam
 {:tip: .tip}
 {:note: .note}
 
-# Enabling public access to resources
+# Managing public access to resources
 {: #public}
 
-Public access to resources enables all users and service IDs to be able to access a specific resource in your account. This means that a user or service ID does not need to authenticate with {{site.data.keyword.Bluemix}} to access information in an {{site.data.keyword.cos_full_notm}} bucket, for example. Only certain services support the ability to provide public access to specific resource types for the service. Therefore, you are limited to creating policies only for services that support this feature.
+By default, all users, both authenticated and unauthenticated, and service IDs in an account are members of the Public Access group. You can give all members of the group access to specfic resources by defining those resources in a policy. In some cases, however, you might want to prevent public access to the resources, which you control by disabling public access at the account level. 
 {:shortdesc}
 
-To enable public access for resources, you must use the **Public Access** access group that is provided for you in your account. This access group includes all users and service IDs by default. You can't delete the group or change the membership of the group, but you can add, edit, and delete access policies for the group.
+To manage public access, you must be an administrator of the IAM Access Groups service in the account.
 
-## Creating a policy for the public access group
+## Assigning public access to resources
 {: #public_policy}
 
-Complete the following steps to assign a policy to your public access group. The following task uses the Cloud Object Storage service as an example for assigning public access to a bucket called `mybucket123`.
+When public access is enabled in the account, you can create a policy to define the resources that all members of the Public Access group can access. To create a policy, you must have administrator access on the resource. 
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access groups**.
-2. Select the **Public Access** group.
-3. Click **Assign access**.
-4. Select **Cloud Object Storage** from the services list.
+As an example, the following section describes how to assign public access to an {{site.data.keyword.cos_full}} bucket that's named `mybucket123`. 
+
+### Assigning access in the console
+{: #public-access-console}
+
+1. From the console menu bar, click **Manage** > **Access (IAM)**, and select **Access groups**.
+2. Click the name of the public access group > **Assign access**.  
+3. Select **{{site.data.keyword.cos_short}}** from the **Services** list.
+4. Select the specific instance from the **Service instance** list.
 5. Enter `bucket` for the resource type.
 6. Enter `mybucket123` for the resource ID.
-7. Click **Assign**.
-8. Click **Yes** to confirm that you want to assign the public access policy to the resource, and then click **Assign**.
+7. Select the service access role, and click **Assign**. 
+8. Confirm that you want to assign the public access policy to the resource, and click **Assign**.
+
+### Assigning access by using the CLI
+{: #public-access-cli}
+
+To assign access for the Public Access group, run the **`ibmcloud iam access-group-policy-create`** command. In the command example, the policy details are specified in a JSON file. See [Assigning access by using the API](#public-access-api) for an example of what to include in the JSON file.
+
+```
+$ ibmcloud iam access-group-policy Public Access -f @policy.json
+```
+
+For details about the command options, see [`ibmcloud iam access-group-policy-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create).
+
+### Assigning access by using the API
+{: #public-access-api}
+ 
+The following request example creates a policy for the Public Access group. 
+
+```
+curl -X POST \
+'https://iam.cloud.ibm.com/v1/policies' \
+-H 'Authorization: $TOKEN' \
+-H 'Content-Type: application/json' \
+-d '{
+  "type": "access",
+  "subjects": [
+    {
+      "attributes": [
+        {
+          "name": "access_group_id",
+          "value": "AccessGroupId-PublicAccess"
+        }
+      ]
+    }
+  ],
+  "roles":[
+    {
+      "role_id": "crn:v1:bluemix:public:iam::::role:Administrator"
+    }
+  ],
+  "resources":[
+    {
+      "attributes": [
+        {
+          "name": "accountId",
+          "value": "$ACCOUNT_ID"
+        },
+        {
+          "name": "serviceName",
+          "value": "$SERVICE_NAME"
+        },
+      ]
+    }
+  ]
+}'
+```
+{: codeblock}
+
+For more information, see [Create a policy](https://cloud.ibm.com/apidocs/iam-policy-management#create-a-policy){: external}.
+
+## Disabling public access to resources
+{: #disable-public-access}
+
+When you disable public access, all existing policies for the Public Access group are deleted, which means all group members no longer have access to IAM-enabled services. Also, you can't create or modify any policies for public access. 
+
+### Disabling access in the console
+{: #disable-public-ui}
+
+To disable public access for the account, go to **Manage** > **Access (IAM)** > **Settings**, and set the Public access setting to **Disable public access**.
+
+### Disabling access by using the API
+{: #disable-public-api}
+
+The following request example disables public access for the account. 
+
+```
+curl -X PATCH \
+'https://iam.cloud.ibm.com/v2/groups/settings?account_id=<account_id>' \
+-H 'Authorization: $TOKEN' \
+-H 'Content-Type: application/json' \
+-d '{
+  "public_access_enabled": false
+}'
+```
+{: codeblock}
+
+For more information, see [Update account settings](https://cloud.ibm.com/apidocs/iam-access-groups#update-account-settings){: external}.
+
