@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2017, 2019
+  years: 2017, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-01-08"
 
 keywords: resource access, assign access, IAM access policy, access to resource groups, edit access, remove access 
 
@@ -18,6 +18,8 @@ subcollection: iam
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:note: .note}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'} 
 
 # Managing access to resources
 {: #iammanidaccser}
@@ -27,6 +29,8 @@ To manage access or assign new access for users by using IAM policies, you must 
 
 ## Editing existing access
 {: #edit_existing}
+{: help}
+{: support}
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select the name of the user that you want to assign access.

@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2019
-lastupdated: "2019-03-05"
+  years: 2015, 2020
+lastupdated: "2020-01-08"
 
 keywords: API key, user API keys, IBM Cloud API keys, manage user keys, create API key
 
@@ -15,6 +15,8 @@ subcollection: iam
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:new_window: target="_blank"}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'} 
 
 # Managing user API keys
 {: #userapikey}
@@ -26,6 +28,8 @@ As a [federated user](/docs/account?topic=account-signup#signup), you can use an
 
 ## Creating an API key
 {: #create_user_key}
+{: help}
+{: support}
 
 As an {{site.data.keyword.Bluemix_notm}} user you might want to use an API key when you enable a program or script without distributing your password to the script. A benefit of using an API key can be that a user or organization can create several API Keys for different programs and the API keys can be deleted independently if compromised without interfering with other API keys or even the user. You can create up to 20 API keys.
 

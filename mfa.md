@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2018, 2019
-lastupdated: "2019-10-01"
+  years: 2018, 2020
+lastupdated: "2020-01-08"
 
 keywords: MFA, multifactor authentication, IBMid MFA, two-factor authentication, account MFA, time-based one-time passcode, TOTP
 
@@ -17,6 +17,8 @@ subcollection: iam
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:note: .note}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'} 
 
 # Requiring MFA for users in your account
 {: #enablemfa}
@@ -43,6 +45,8 @@ When the multifactor authentication account setting is enabled, all IBMid users 
 
 ## Enabling MFA for all users in your account
 {: #enabling}
+{: help}
+{: support}
 
 To enable MFA, you must be the account owner or an administrator for the billing account management service. Enabling MFA does not affect users that are already logged in, as the enforcement of MFA on the account takes effect only at new logins. Make sure you notify your account users that MFA is enabled, and describe the impact to users at their next login.
 

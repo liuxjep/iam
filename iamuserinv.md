@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2019
+  years: 2015, 2020
 
-lastupdated: "2019-09-23"
+lastupdated: "2020-01-08"
 
 keywords: invite, invite users, invitation access, vpn-only user
 
@@ -19,6 +19,8 @@ subcollection: iam
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'} 
 
 # Inviting users to an account
 {: #iamuserinv}
@@ -41,6 +43,8 @@ Depending on your access level, you can invite new users and assign all or just 
 
 ## Setting up an invitation
 {: #invitations}
+{: help} 
+{: support}
 
 To invite users, complete the following steps:
 

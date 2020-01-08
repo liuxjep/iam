@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-08"
+  years: 2018, 2020
+lastupdated: "2020-01-08"
 
 keywords: IAM token, token, API key, generate token, access token
 
@@ -18,9 +18,13 @@ subcollection: iam
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'} 
 
 # Generating an {{site.data.keyword.Bluemix_notm}} IAM token by using an API key
 {: #iamtoken_from_apikey}
+{: help}
+{: support}
 
 Generate an {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) token by using either your IAM API key or a service ID's API key. {{site.data.keyword.Bluemix_notm}} APIs can be accessed only by users who are authorized by an assigned IAM role. Each user who is calling the API must pass credentials for the API to authenticate.
 {:shortdesc}
