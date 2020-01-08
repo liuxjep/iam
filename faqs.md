@@ -20,6 +20,7 @@ subcollection: iam
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
+{:support: data-reuse='support'} 
 {:note: .note}
 
 # FAQs for IAM
@@ -31,6 +32,7 @@ FAQs for {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) m
 ## What is {{site.data.keyword.cloud_notm}} Identity and Access Management?
 {: #whatisiam}
 {: faq}
+{: support}
 
 Identity and Access Management (IAM) enables you to securely authenticate users for platform services and control access to resources across the {{site.data.keyword.cloud_notm}} platform. A set of IBM Cloud services is enabled to use Cloud IAM for access control. They are organized into resource groups within your account to enable giving users quick and easy access to more than one resource at a time. Cloud IAM access policies are used to assign users and service IDs access to the resources within your account. For more information, see [{{site.data.keyword.cloud_notm}} Identity and Access Management](/docs/iam?topic=iam-iamoverview#iamoverview).
 
@@ -63,6 +65,7 @@ The access management systems are entirely different. IAM resources belong to a 
 ## How do I find out what I have access to?
 {: #iam-access}
 {: faq}
+{: support}
 
 Go to **Manage** &gt; **Access (IAM)**, and select your name on the Users page. Then, depending on the access you're looking for, open the different tabs:
 
@@ -98,6 +101,7 @@ For more information, see [Best practices for assigning access](/docs/iam?topic=
 ## How do I ensure that my users can create resources within a resource group?
 {: #resources}
 {: faq}
+{: support}
 
 To create a resource in a resource group, the user must have two access policies: one assigned to the resource group itself, and one assigned to the resources in the group. Access to the resource group itself is simply access to the container that organizes the resources, and this type of policy allows a user to view, edit, or manage access to the group, but not the resources within it. Access to services within the resource group enables a user to work with the service instances, which means the user can create a service instance.
 
@@ -110,6 +114,7 @@ So, minimally the user must have the following access:
 ## What access do I need to provide others access?
 {: #user-access}
 {: faq}
+{: support}
 
 For IAM-enabled services, you must have Administrator role on the service or resource that you want to assign users access to. If you want to assign access to all services or resources in the account, you need a policy on all Identity and Access enabled services with the Administrator role. And, to assign users access to account management services, you must be assigned the Administrator role on the specific service or all account management services.
 
@@ -139,6 +144,7 @@ The account owner can remove any users from the account, and any user with the f
 ## How do I require IBMid multifactor authentication for my account?
 {: #multi-factor}
 {: faq}
+{: support}
 
 1. Go to **Manage** &gt; **Access (IAM)**, and select **Settings**.
 2. From the Account login section, select **Update** to select MFA for all users or non-federated users only.
@@ -172,6 +178,7 @@ Access control and account resource organization are the major differences betwe
 ## How do I delegate account administrator capabilities?  
 {: #account-administrator}
 {: faq}
+{: support}
 
 To delegate the account administrator capabilities, assign the following access:
 
