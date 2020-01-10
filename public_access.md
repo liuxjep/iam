@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-12-19"
+lastupdated: "2020-01-10"
 
 keywords: public access, anonymous access, users, service IDs, public access group, enable, disable, manage, IAM
 
@@ -22,7 +22,7 @@ subcollection: iam
 # Managing public access to resources
 {: #public}
 
-By default, all users, both authenticated and unauthenticated, and service IDs in an account are members of the Public Access group. You can give all members of the group access to specfic resources by defining those resources in a policy. In some cases, however, you might want to prevent public access to the resources, which you control by disabling public access at the account level. 
+By default, all users, both authenticated and unauthenticated, and service IDs in an account are members of the Public Access group. You can give all members of the group access to specific resources by defining those resources in a policy. In some cases, however, you might want to prevent public access to the resources, which you control by disabling public access at the account level. 
 {:shortdesc}
 
 To manage public access, you must be an administrator of the IAM Access Groups service in the account.
