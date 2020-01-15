@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-05-01"
+lastupdated: "2020-01-14"
 
 keywords: MFA, multifactor authentication, external authentication, order authentication, Symantec, phone-based authentication, cancel authentication order
 
@@ -27,10 +27,7 @@ As an administrator with the correct access, you can order external authenticati
 ## Ordering external authentication
 {: #ordering}
 
-If you have any the following access, you can order external authentication for a user:
-
-* Editor or higher role on the User management service
-* You are an ancestor in the classic infrastructure hierarchy for the user and you have the Manage users classic infrastructure permission assigned
+You can order external authentication for a user if you are the master user or if you have the Manage User and Add/Upgrade Services permissions.
 
 To order external authentication, complete the following steps:
 
@@ -69,6 +66,6 @@ To cancel the external authentication order, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select Users.
 2. Select a user from the list.
-3. From the **User details** page, click **Delete** ![Delete icon](../icons/icon_trash.svg) for the **Symantec authentication** or **Phone-based authentication** row depending on which one you ordered.
+3. From the **User details** page, click **Delete** ![Delete icon](../icons/icon_trash.svg) for the **Symantec authentication** or **Phone-based authentication**.
 4. Select when to remove it.
 5. Click **Remove**.
