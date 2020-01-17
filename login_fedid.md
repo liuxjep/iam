@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015，2019
+  years: 2015，2020
 
-lastupdated: "2019-03-27"
+lastupdated: "2020-01-17"
 
 keywords: federated ID, enterprise SSO, single sign-on ID, API key login, one-time passcode login
 
@@ -21,7 +21,7 @@ subcollection: iam
 # Logging in with a federated ID
 {: #federated_id}
 
-As a federated user that uses a corporate or enterprise single sign-on ID, you can log in to {{site.data.keyword.Bluemix}} from the command line interface (CLI) by using either a one-time passcode or an API key.
+As a federated user that uses a corporate or enterprise single sign-on ID, you can log in to {{site.data.keyword.Bluemix}} from the command-line interface (CLI) by using either a one-time passcode or an API key.
 {: shortdesc}
 
 ## Using a one-time passcode
@@ -34,6 +34,9 @@ Because a one-time passcode retrieves code from the {{site.data.keyword.Bluemix_
 
 ### From the {{site.data.keyword.Bluemix_notm}} CLI
 {: #login_cli}
+
+There are two different methods that you can use for logging in with the CLI. For the first method, use the following steps:
+
 1. Specify the `--sso` option with the `ibmcloud login` command.
 2. Follow the URL in the prompt to get the one-time passcode.
 3. Copy and paste the passcode value in the CLI as your input.
@@ -50,8 +53,15 @@ Because a one-time passcode retrieves code from the {{site.data.keyword.Bluemix_
 
   ```
 
+If you're already logged in to the console, you can use the following steps:
+
+1. Go to your {{site.data.keyword.Bluemix_notm}} console and click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
+2. Copy the information for the {{site.data.keyword.Bluemix_notm}} CLI into the CLI. 
+
 ### From the Cloud Foundry CLI
 {: #login_cf_cli}
+
+There are two different methods that you can use for logging the Cloud Foundry CLI. For the first method, use the following steps:
 
 1. Specify the `--sso` option with the `cf login` command.
 2. Follow the URL in the prompt to get the one-time passcode.
@@ -68,10 +78,23 @@ Because a one-time passcode retrieves code from the {{site.data.keyword.Bluemix_
 
   ```
 
+If you're already logged in to the console, you can use the following steps:
+
+1. Go to your {{site.data.keyword.Bluemix_notm}} console and click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
+2. Copy the information for the Cloud Foundry CLI and paste into the CLI. 
+
+### From the OpenShift CLI
+{: #openshift_cli}
+
+You can log in with a one time passcode by using the following steps:
+
+1. Log in to the console, and from the console, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
+2. Copy the information for the OpenShift CLI and paste into the CLI.
+
 ## Using an API key
 {: #api_key}
 
-The required API key is the {{site.data.keyword.Bluemix_notm}} API key used to authenticate with the {{site.data.keyword.Bluemix_notm}} platform, not the classic infrastructure API key, or {{site.data.keyword.Bluemix_notm}} service API key.
+The required API key is the {{site.data.keyword.Bluemix_notm}} API key that is used to authenticate with the {{site.data.keyword.Bluemix_notm}} platform, not the classic infrastructure API key, or {{site.data.keyword.Bluemix_notm}} service API key.
 
 1. Create an API key with the [`ibmcloud iam api-key-create` command](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_key_create). Use the `-f` option to generate an API key file instead of showing the key in the command window:
 
@@ -103,7 +126,7 @@ The required API key is the {{site.data.keyword.Bluemix_notm}} API key used to a
    For Windows 10 PowerShell, you want to use `'@key_file_name'` with single quotation marks around the key file name.
    {: tip}
 
-  To log in by using the Cloud Foundry CLI, specify `apikey` as the user name and the API key string as the password:
+  To log in by using the Cloud Foundry CLI, specify `apikey` as the username and the API key string as the password:
 
     ```
     cf login -a https://api.us-south.cf.cloud.ibm.com
