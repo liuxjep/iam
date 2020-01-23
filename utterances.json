@@ -1,0 +1,190 @@
+{
+  "whatisiam":[
+    "what's IAM",
+    "what is identity and access",
+    "what does IAM mean",
+    "describe IAM",
+    "understand what IAM is"
+    ],
+  "iam-enabled":[
+     "whats IAM enabled",
+     "describe iam enabled service",
+     "use iam-enabled services",
+     "assign resource group to an IAM-enabled service",
+     "how to use IAM enabled services"
+   ],
+ "iam-policies":[
+    "explain IAM access policy",
+    "how do the access policy work",
+    "does the access policy work",
+    "what is the access policy",
+    "tell me about IAM access policy",
+    "explain for the policy for access for IAM"
+    ],
+  "iam-cloudfoundry":[
+    "are IAM and Cloud Foundry the same",
+    "difference between Cloud Foundry and IAM",
+    "are IAM and Cloud Foundry different",
+    "IAM and Cloud Foundry do differently",
+    "are Cloud Foundry and IAM different"
+    ],
+  "iam-access":[
+    "What access do I have",
+    "access groups I can access",
+    "access do I have assigned",
+    "different access assigned to me",
+    "where can I see my access"  
+    ],
+  "request-access":[
+    "request access to a resource",
+    "update my access to a resource",
+    "upgrade my access rights",
+    "looking to change my access",
+    "requesting access to a new resource"  
+    ],
+  "iam-id":[
+    "find my IAM ID",
+    "looking for an IAM id",
+    "finding my iam id",
+    "find the IAM id for another person",
+    "iam id of a team member"  
+    ],
+  "resource-groups":[
+    "why use resource groups",
+    "why use access groups",
+    "benefit of a resource group",
+    "benefit of an access group",
+    "benefits of access groups"  
+    ],
+  "resources":[
+    "create resources within a resource group",
+    "add a resource to a resource group",
+    "update a resource group with resources",
+    "allow a user to create a resource in a resource group",
+    "users to create resources in resource groups"  
+    ],
+  "user-access":[
+    "can I do as Administrator for IAM",
+    "can I assign access to others",
+    "access rights to grant others access",
+    "access assignment for other users",
+    "give access to someone else"      
+    ],
+  "providing-access":[
+    "difference between access to manage a resource group and access to resources",
+    "same access to manage resource group and  the resources in the group",
+    "different access for resources and resource groups",
+    "can I do if I have access to manage a resource group",
+    "What can I do if I have access to manage resources"         
+    ],
+  "remove-users":[
+    "who can remove users",
+    "who has access to remove users from an account",
+    "can I delete a user",
+    "why can't I remove a user",
+    "need to delete someone from an acount",          
+    "removing users from this account"
+    ],
+  "multi-factor":[
+    "require IBMid multifactor authentication for my account",
+    "require MFA for my account",
+    "IBM id multifactor authentication requirement",
+    "IBMid MFA requirements",
+    "want MFA for my account",        
+    "requiring MFA for these accounts"
+    ],
+  "service-platform-roles":[
+    "What are service and platform roles",
+    "whats a service role",
+    "what is a platfrom role",
+    "Are service and platform roles the same",
+    "is a service role different from platform roles"        
+    ],
+  "action-mapping":[
+    "actions mapped to each IAM role",
+    "actions for roles can each user do",
+    "actions can a user do in the IAM",
+    "are the different IAM role actions",
+    "IAM role actions"       
+   ],
+  "groups-organizations":[
+    "difference between a resource group and Cloud Foundry orgs and spaces",
+    "differences between resource groups and orgs and spaces",
+    "are resource groups and orgs different",
+    "is a resource group and an org different",
+    "are resource groups and orgs and spaces the same",
+    "are spaces and orgs different to resource groups"
+    ],
+  "account-administrator":[   
+     "delegate account administrator capabilities",
+     "give someone admin capabilities for the account",
+     "assign someone else administrator rights for the account",
+     "delegate admin access",
+     "give someone an Admin role",
+     "assign an Administrator role"
+     ],
+  "resources-and-rg":[   
+     "access enables a user to work with a single resource", 
+     "assign access to an individual resource in the account",
+     "give access to all resources in the account",
+     "access for a user to resource",
+     "what access policy on the specific resource does a user need"
+     ],
+  "users":[   
+     "every user in my account see all the other users",
+     "view all users in the account",
+     "can view all users in our account",
+     "can't see all users for the account",
+     "user list visibility"
+     ],
+  "account-invite":[   
+     "assign access to a user when I invite them to the account?",
+     "give access to Users immediately",
+     "when do I have to give users access",
+     "do I assign access to a new users immediately",
+     "do I have to give a user access as soon as I add them to the account"
+     ],
+  "appid":[   
+     "add authentication into my web and mobile apps",
+     "adding authentication into your web and mobile apps",
+     "add authentication to my web and mobile apps",
+     "how to secure my apps and services",
+     "add security to my apps"
+     ],
+  "troubleshoot-serviceaccess":[   
+     "can't access a resource from the Resource list page",
+     "cant access the services on the Resource list",
+     "unable to access a service from the resource",
+     "You do not have access to any organizations, spaces, or resource groups in this region",
+     "don't have access to any organizations, spaces, or resource groups in this region",
+     "cant access organizations, spaces, or resource groups"
+     ],
+  "troubleshoot-myaccess":[   
+     "want to know what access I am assigned",
+     "not sure what level of access I'm assigned",
+     "don't have access to complete a task",
+     "what level of access am I assigned",
+     "what access levels do I have"
+     ],
+  "troubleshoot-invite":[   
+     "cant I invite users to the account",
+     "can not add anyone to the account",
+     "am I unable to invite users to this account",
+     "can't add anyone to this account",
+     "can't invite users to the account"
+     ],
+  "troubleshoot-classicinfra":[     
+     "view classic infrastructure permissions for other users",
+     "can't view another user's classic infrastructure permissions",
+     "access to view and edit permissions for another user",
+     "edit permissions for another user in the account",
+     "edit classic infrastructure permissions for other users"
+     ],
+  "troubleshoot-migrated-permissions":[  
+     "manage migrated billing and support case permissions",
+     "don't have the same managing billing and support case permissions",
+     "manage permissions for migrated billing",
+     "migrated permissions access groups might not have been assigned the correct access",
+     "migrated billing and support case permission"
+     ]
+ }
