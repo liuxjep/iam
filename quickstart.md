@@ -34,7 +34,6 @@ This tutorial is for IAM-enabled resources. For services that don't support crea
 If you are new to using IAM, check out the following documentation to understand more about the features, concepts, and components of the access management system:
 
 * [IBM Cloud Identity and Access Management](/docs/iam?topic=iam-iamoverview) provides a quick overview of what IAM is in {{site.data.keyword.Bluemix_notm}}, the available features, and links to available CLI and API docs.
-* [IAM concepts](/docs/iam?topic=iam-iamoverview) outlines the high-level concepts in IAM that can help you understand the different components as you get started.
 * [IAM access](/docs/iam?topic=iam-userroles) gives a more in-depth review of how access management works by using access policies.
 
 
