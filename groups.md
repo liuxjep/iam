@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2018, 2019
-lastupdated: "2019-12-17"
+  years: 2018, 2020
+lastupdated: "2020-02-05"
 
 keywords: access groups, access group, create group, assign access to group
 
@@ -28,7 +28,7 @@ An access group can be created to organize a set of users and service IDs into a
 To manage or create new access groups, you must have the following type of access:
 
 * Account owner
-* Administrator or editor on the IAM Access Groups service in the account
+* Administrator or editor on the IAM Access Groups account management service in the account
 * Administrator or editor for the all Account Management Services
 
 Additionally, an administrator or editor can be assigned access to manage an individual group by creating an access policy where the resource is the Access group ID. For more information about access policies and roles for the IAM Access Groups service, see [IAM access](/docs/iam?topic=iam-userroles#userroles).
@@ -48,7 +48,7 @@ To create an access group, complete the following steps:
 Next, continue to set up your group by adding users or service IDs:
 
 1. Select the name of the group that you want to add to.
-2. Click **Add users** from the **Users** tab.
+2. Click **Add users** on the **Users** tab.
 3. Select the users that you want to add from the list, and click **Add to group**.
 4. To add service IDs to the group, click the **Service IDs** tab, and click **Add service ID**.
 5. Select the IDs that you want to add from the list, and click **Add to group**.
@@ -73,14 +73,15 @@ After you set up your group with users and service IDs, you can assign a common 
 2. From the row for the group that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**. 
 3. Add one or more of the access options that you manage. You must assign at least one access option. For any access options that you don't add and configure, the default value of **No access** is assigned. Depending on the options that you are authorized to manage, you can assign the following types of access:
 
-  * Select **IAM services**, and then select the option for all services or just a specific service. Next, you can scope the access to the entire account, all resource groups, or just one resource group. Then, select all roles that apply. To view what actions are mapped to each role, click the **Actions for role** option to view a list of all actions that are mapped to a specific role. <br><br> Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information. 
+     * Select **IAM services**, and then select the option for all services or just a specific service. Next, you can scope the access to the entire account, all resource groups, or just one resource group. Then, select all roles that apply. To view what actions are mapped to each role, click the **Actions for role** option to view a list of all actions that are mapped to a specific role. <br><br> Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information. 
      
-  If you select the **Account** scope for the access policy, the user must already have the viewer role or higher on the resource group or groups that contain the resources you want the user to have access to. Without a role on a resource group, the user can't work with the resource from the Resource list page in the console.
-  {: tip}
+         If you select the **Account** scope for the access policy, the user must already have the Viewer role or higher on the resource group or groups that contain the resources you want the user to have access to. Without a role on a resource group, the user can't work with the resource from the Resource list page in the console.
+         {: tip}
      
-  * Select **Account management**, and then select from the all account management services option or select a specific service. Then, select all roles that apply.
+     * Select **Account management**, and then choose from the all account management services option or select a specific service. Then, select all roles that apply.
+
    
-4. Click **Add** > **Assign**. 
+5. Click **Add** > **Assign**.  
 
 
 To create an access group policy by using the CLI, you can use the [ibmcloud iam access-group-policy-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create) command.
