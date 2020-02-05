@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-09-20"
+  years: 2015, 2020
+lastupdated: "2020-02-04"
 
 ---
 
@@ -20,14 +20,14 @@ lastupdated: "2019-09-20"
 # Troubleshooting for IAM
 {: #troubleshoot_iam}
 
-General problems with using IAM might include needing access to a resource or account to perform a task or identifying the right type of access to assign users in your account to perform specific tasks. In many cases, you can recover from these problems by following a few easy steps.
+General problems with using Identity and Access Management (IAM) might include needing access to a resource or account to perform a task or identifying the right type of access to assign users in your account to perform specific tasks. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
-## My user can't access a resource from the Resource list page
+## I gave a user access to a resource, but they still can't access it from the Resource list page
 {: #troubleshoot-serviceaccess}
 {: troubleshoot}
 
-A user has an access policy on a specific resource or a service in the account, but they can't access the service from the Resource list page.
+A user has an access policy on a specific resource or a service in the account, but they can't access the service from the My resources page.
 
 When the user selects the service name, the following error message is displayed:
 {: tsSymptoms}
@@ -39,9 +39,13 @@ In addition to access to the type of service or specific resource, the user must
 {: tsCauses}
 
 1. Go to **Manage** &gt; **Access (IAM)**, and select the user's name from **Users** page. 
-2. From the **Access policies** tab, select **Assign access**. 
-3. Select **Assign access within a resource group**. Then, select a specific resource group if you want to limit the user to view or manage only resources in that resource group, or select **All resource groups**. 
-4. Next, select the role that you want the user to have. The Viewer role is sufficient to enable the user to access the resource. 
+1. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
+1. Select **Assign users additional access**.
+1. Select the **IAM services** tile. 
+1. Select the type of access you want to assign, then select a specific resource group if you want to limit the user to view or manage only resources in that resource group, or select **All resource groups**. 
+1. Next, select the role that you want the user to have. The Viewer role is sufficient to enable the user to access the resource. 
+1. Click **Add** to add the access to the access summary. 
+1. Click **Assign**. 
 {: tsResolve}
 
 For more information about what other actions a user can perform with a policy on the resource group itself, see [Assigning access to resource groups and the resources within them](/docs/resources?topic=resources-bp_resourcegroups#assigning_access_rgs).
@@ -104,13 +108,28 @@ You must ask the account owner to be assigned the **Manage users** classic infra
 {: #troubleshoot-migrated-permissions}
 {: troubleshoot}
 
-With the initial migration of users and permissions for managing billing and support cases from your SoftLayer account to your linked {{site.data.keyword.Bluemix_notm}} account, some users might have been missing these permissions. However, all migrated permission access groups are now assigned the correct IAM access policies, ensuring that all users are assigned the correct access that they had previously.
+With the initial migration of users and permissions for managing billing and support cases from your SoftLayer account to your linked {{site.data.keyword.Bluemix_notm}} account, some users might not have these permissions. However, all migrated permission access groups are now assigned the correct IAM access policies, ensuring that all users are assigned the correct access that they had previously.
 
 Users don't seem to have the same managing billing and support case permissions in the {{site.data.keyword.Bluemix_notm}} console that they were previously assigned in your SoftLayer account.
 {: tsSymptoms}
    
-Your migrated permissions access groups might not have been assigned the correct access policies when the users were initially migrated.
+Your migrated permissions access groups might not be assigned the correct access policies when the users were initially migrated.
 {: tsCauses}
 
-As of 20 May 2019, all [migrated permission access groups](/docs/iam?topic=iam-migrated_permissions) have the correct policies assigned for managing billing information and support cases. If you tried to use these groups before this date, the access groups missing equivalent IAM access policies might have caused a mismatch in the assigned access between the SoftLayer permissions and IAM access. This has been resolved. You can go to **Manage** > **Access (IAM)**, and then select **Access groups** to review the users and policies that are assigned to each access group.
+As of 20 May 2019, all [migrated permission access groups](/docs/iam?topic=iam-migrated_permissions) have the correct policies that are assigned for managing billing information and support cases. If you tried to use these groups before this date, the access groups missing equivalent IAM access policies might have caused a mismatch in the assigned access between the SoftLayer permissions and IAM access. This has been resolved. You can go to **Manage** > **Access (IAM)**, and then select **Access groups** to review the users and policies that are assigned to each access group.
+{: tsResolve}
+
+## I can't assign access in my account because I've reached the maximum number of allowed policies
+{: #troubleshoot-policy-limit}
+{: troubleshoot}
+
+I tried to assign access, but received an error message that I reached the limit of access policies in the  account.
+
+A new policy can't be created to assign access, and I receive an error message that states `422: Exceeded maximum policies quota error`.
+{: tsSymptoms}
+   
+The account has reached the [limit of total number of policies allowed](/docs/iam?topic=iam-iam_limits).
+{: tsCauses}
+
+Reduce the number of policies on the account by following the [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup). For more information about policy limits for the account, see [IBM Cloud IAM limits](/docs/iam?topic=iam-iam_limits).
 {: tsResolve}
