@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2020
 
-lastupdated: "2020-01-08"
+lastupdated: "2020-02-05"
 
 keywords: invite, invite users, invitation access, vpn-only user
 
@@ -15,12 +15,12 @@ subcollection: iam
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}  
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'} 
 
 # Inviting users to an account
 {: #iamuserinv}
@@ -36,7 +36,7 @@ To invite users and manage outstanding invitations, you must have at least one o
 * Account owner
 * Cloud Foundry organization manager
 * An IAM access policy with the Editor role or higher on the user management account management service
-* The Users manage classic infrastructure permission to add users
+* The Manage Users classic infrastructure permission to add users
 
 Depending on your access level, you can invite new users and assign all or just some types of access. For example, if you're not the account owner, but you're a Cloud Foundry organization manager, you can invite users and assign only Cloud Foundry access.
 {: note}
@@ -57,12 +57,13 @@ To invite users, complete the following steps:
   * Manually assign users access. Expand this section to assign individual IAM access policies, Cloud Foundry roles, or classic infrastructure permissions.
      * Select **Cloud Foundry**, choose an organization, then select a region to select a specific space, and assign a space role. An organization and space role are both required to add the access assignment to the invite.
      * Select **Classic infrastructure**, and then choose from the three permission sets.
-     * Select **IAM services**, and then select the option for all services or just a specific service. Next, you can scope the access to the entire account, all resource groups, or just one resource group. Then, select all roles that apply. To view what actions are mapped to each role, click the **Actions for role** option to view a list of all actions that are mapped to a specific role. 
+     * Select **IAM services**, and then select the option for all services or just a specific service. Next, you can scope the access to the entire account, all resource groups, or just one resource group. Then, select all roles that apply. To view what actions are mapped to each role, click the **Actions for role** option to view a list of all actions that are mapped to a specific role. <br><br> Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information. 
      
          If you select the **Account** scope for the access policy, the user must already have the Viewer role or higher on the resource group or groups that contain the resources you want the user to have access to. Without a role on a resource group, the user can't work with the resource from the Resource list page in the console.
          {: tip}
      
      * Select **Account management**, and then choose from the all account management services option or select a specific service. Then, select all roles that apply.
+     
 5. Select **Add** to save the access assignment to the invitation.
 6. After you add all the necessary access assignments, click **Invite**.
 
@@ -83,7 +84,7 @@ By using the CLI, you can choose to assign Cloud Foundry access or no access and
 ### Inviting users by using the API
 {: #api-invite}
 
-You can use the [API](https://cloud.ibm.com/apidocs/user-management#invite-users){: external} to invite users in bulk. All users that are included in a single invitation are assigned the same access. When you invite users by using the API, you enter emails in a comma-separated list with each entry surrounded by quotations, for example:
+You can use the [API](https://cloud.ibm.com/apidocs/user-management#invite-users){: external} to invite users in bulk. All users that are included in a single invitation are assigned the same access. When you invite users by using the API, you enter emails in a comma-separated list with each entry that is surrounded by quotations, for example:
 
 
 ```
