@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-06"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2020-02-04"
 # Troubleshooting for IAM
 {: #troubleshoot_iam}
 
-General problems with using Identity and Access Management (IAM) might include needing access to a resource or account to perform a task or identifying the right type of access to assign users in your account to perform specific tasks. In many cases, you can recover from these problems by following a few easy steps.
+General problems with using Identity and Access Management (IAM) might include needing access to a resource or account to complete a task or identifying the right type of access to assign users in your account to complete specific tasks. In many cases, you can recover from these problems by following a few steps.
 {:shortdesc}
 
 ## I gave a user access to a resource, but they still can't access it from the Resource list page
@@ -35,7 +35,7 @@ When the user selects the service name, the following error message is displayed
 `You do not have access to any organizations, spaces, or resource groups in this region. Check that you have the appropriate access with your account owner or administrator.`
 
    
-In addition to access to the type of service or specific resource, the user must also have access to the resource group or space that contains the resource. To access the resource instance within a specific account, a user must be assigned at least the Viewer role or higher on the resource group itself. 
+In addition to access to the type of service or specific resource, the user must also be assigned access to the resource group or space that contains the resource. To access the resource instance within a specific account, a user must be assigned at least the Viewer role or higher on the resource group itself. 
 {: tsCauses}
 
 1. Go to **Manage** &gt; **Access (IAM)**, and select the user's name from **Users** page. 
@@ -116,10 +116,10 @@ Users don't seem to have the same managing billing and support case permissions 
 Your migrated permissions access groups might not be assigned the correct access policies when the users were initially migrated.
 {: tsCauses}
 
-As of 20 May 2019, all [migrated permission access groups](/docs/iam?topic=iam-migrated_permissions) have the correct policies that are assigned for managing billing information and support cases. If you tried to use these groups before this date, the access groups missing equivalent IAM access policies might have caused a mismatch in the assigned access between the SoftLayer permissions and IAM access. This has been resolved. You can go to **Manage** > **Access (IAM)**, and then select **Access groups** to review the users and policies that are assigned to each access group.
+As of 20 May 2019, all [migrated permission access groups](/docs/iam?topic=iam-migrated_permissions) have the correct policies that are assigned for managing billing information and support cases. If you tried to use these groups before this date, the access groups that are missing equivalent IAM access policies might have caused a mismatch in the assigned access between the SoftLayer permissions and IAM access. This is resolved. You can go to **Manage** > **Access (IAM)**, and then select **Access groups** to review the users and policies that are assigned to each access group.
 {: tsResolve}
 
-## I can't assign access in my account because I've reached the maximum number of allowed policies
+## I can't assign access in my account because I reached the maximum number of allowed policies
 {: #troubleshoot-policy-limit}
 {: troubleshoot}
 
@@ -128,7 +128,7 @@ I tried to assign access, but received an error message that I reached the limit
 A new policy can't be created to assign access, and I receive an error message that states `422: Exceeded maximum policies quota error`.
 {: tsSymptoms}
    
-The account has reached the [limit of total number of policies allowed](/docs/iam?topic=iam-iam_limits).
+The account is at the [limit of total number of policies allowed](/docs/iam?topic=iam-iam_limits).
 {: tsCauses}
 
 Reduce the number of policies on the account by following the [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup). For more information about policy limits for the account, see [IBM Cloud IAM limits](/docs/iam?topic=iam-iam_limits).
