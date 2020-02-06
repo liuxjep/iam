@@ -41,22 +41,22 @@ A maximum of 1,000 policies and service to service authorizations within one acc
 ## Requesting a policy limit increase
 {: #limit-increase}
 
-You can request a limit increase for the total number of policies allowed in the account only if the following criteria is met: 
+You can request a limit increase for the total number of policies that are allowed in the account only if the following criteria is met: 
 
 * You must be the account owner or an administrator on all account management services.
 * Access groups are currently used to limit the overall number of policies in the account.
-* Utilize policies for resources grouped by resource group.
+* Use policies for resources grouped by resource group.
 * You have taken efforts to clean up and reduce the number of policies in the account.
 
 If you meet all of the listed criteria, you can request a policy limit increase by submitting a support case in the [console](https://{DomainName}/unifiedsupport/cases/add){: external}. In the case, provide all of the following information. Each piece of information is required for processing and approval of your request.
 
 * Case title of `Request to increase account policy limit`
-* The use case for the additional policies
+* The use case for the extra policies
 * Information on all efforts taken to follow the [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup) to reduce the number of policies on the account
 * Account ID
 * Note how many extra policies in the account are required
-* If requesting an increase per subject, note how many extra policies per subject are required
-* An estimate of when you expect or plan to create additional policies
+* If you are requesting an increase per subject, note how many extra policies per subject are required
+* An estimate of when you expect or plan to create extra policies
 
 You are notified of the update to your policy limits through the case.
 {: note}
