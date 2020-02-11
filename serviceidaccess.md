@@ -2,8 +2,8 @@
 
 copyright:
 
-  years: 2015, 2019
-lastupdated: "2019-12-17"
+  years: 2015, 2020
+lastupdated: "2020-02-11"
 
 keywords: service ID, service ID access, managing access for service IDs
 
@@ -21,7 +21,7 @@ subcollection: iam
 # Managing service ID access policies
 {: #serviceidpolicy}
 
-When you create a service ID, you can assign service policies for that service ID to control the level of access that is allowed when it's used to authenticate with your services. You can update these assigned access policies at any time by changing an existing policy, deleting a policy, or assigning a new one.
+When you create a service ID, you can assign access policies for that service ID to control the level of access that is allowed when the service ID is used to authenticate with your services. You can update these assigned access policies at any time by changing an existing policy, deleting a policy, or assigning a new one.
 {:shortdesc}
 
 If you delete or edit an existing policy for a service ID currently being used, it might cause service interruption.
@@ -37,21 +37,21 @@ To assign access to all resources in a resource group or to just one service wit
 3. Add the service ID to an access group. Click **Add** for the access group that you want the service ID to belong to.
 4. (Optional) Manually assign access.
   1. Expand the Assign service IDs additional access section, and click **IAM services**. 
-  2. Select the option for all services or select a specific service.
-  3. Select the region.
+  2. Select the option for all services or a specific service.
+  3. Select the option for all resource groups or a specific resource group instead of the default account option.
   3. Select any combination of roles to define the scope of access, and click **Add** > **Assign**.
 
-To assign access to an individual account management service or all account management services, complete the following steps:
+To assign access to an individual account management services or all account management services, complete the following steps:
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and then select **Service IDs**.
 2. From the row for the service ID that you want to assign a service policy for, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
 3. Add the service ID to an access group. Click **Add** for the access group that you want the service ID to belong to.
 4. (Optional) Manually assign access.
-  1. Expand the Assign service ID additional access section, and click **Account management**.
+  1. Expand the Assign service ID additional access, and click **Account management**.
   2. Select **All Account Management Services** or select a specific account management service.
   3. Select any combination of roles to define the scope of access, and click **Add** > **Assign**.
 
-You might receive a message that a policy exists for the details that were selected. If a policy with the exact details and roles is being created, you're prompted to make changes to the new policy since duplicate policies aren't allowed. If you're creating a policy with the same details but different role assignments as an existing policy, you're prompted to review and update the existing policy with the role assignments that you want to assign.
+You might receive a message that a policy exists for the details that were selected. If a policy with the exact details and roles is being created, you're prompted to make a change to the new policy since duplicate policies aren't allowed. 
 {: tip}
 
 ## Editing existing access
@@ -66,12 +66,13 @@ To edit an existing policy:
 5. Make your changes, and then save the policy.
 
 To update a service policy by using the CLI, you can use the [ibmcloud iam service-policy-update](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_service_policy_update) command.
+
 ```
 ibmcloud iam service-policy-update SERVICE_ID POLICY_ID [-v, --version VERSION] {--file JSON_FILE | [-r, --roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]} [-f, --force]",
 ```
 {: codeblock}
 
-When you edit access for a service ID, you might receive a message about not allowing duplicate policies. If you're editing an existing policy and the changes you make are in conflict with access that is already assigned, you can choose to change the policy you're currently editing to provide different access, or you can go to the existing policy it is in conflict with to review and make changes if needed. You might want to delete the policy you're editing, if a duplicate policy exists that meets your needs.
+When you edit access for a service ID, you might receive a message about not allowing duplicate policies. If you're editing an existing policy and the changes you make are in conflict with access that is already assigned, you must make a change. You can choose to change the policy you're currently editing to provide different access, or you can go to the existing policy it is in conflict with to review and make a change if needed. You might want to delete the policy you're editing, if a duplicate policy exists that meets your needs.
 {: tip}
 
 ## Removing access
