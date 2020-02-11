@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2020-01-10"
+lastupdated: "2020-02-11"
 
 keywords: public access, anonymous access, users, service IDs, public access group, enable, disable, manage, IAM
 
@@ -22,17 +22,17 @@ subcollection: iam
 # Managing public access to resources
 {: #public}
 
-By default, all users, both authenticated and unauthenticated, and service IDs in an account are members of the Public Access group. You can give all members of the group access to specific resources by defining those resources in a policy. In some cases, however, you might want to prevent public access to the resources, which you control by disabling public access at the account level. 
+By default, all users and service IDs in an account are members of the Public Access group in your account. Assigning an access policy to the access group opens access to that resource to anyone whether they're a member of your account or not because authentication is no longer required. However, in some cases you might want to ensure that there is never public access that is allowed to your account resources, which you control by disabling public access at the account level. 
 {:shortdesc}
 
-To manage public access, you must be an administrator of the IAM Access Groups service in the account.
+To manage public access, you must be an administrator of the [IAM Access Groups service](/docs/iam?topic=iam-account-services#access-groups-account-management) in the account.
 
 ## Assigning public access to resources
 {: #public_policy}
 
 When public access is enabled in the account, you can create a policy to define the resources that all members of the Public Access group can access. To create a policy, you must have administrator access on the resource. 
 
-As an example, the following section describes how to assign public access to an {{site.data.keyword.cos_full}} bucket that's named `mybucket123`. 
+As an example, the following section describes how to assign public access to an {{site.data.keyword.cos_full}} bucket that is named `mybucket123`. 
 
 ### Assigning access in the console
 {: #public-access-console}
@@ -55,7 +55,7 @@ To assign access for the Public Access group, run the **`ibmcloud iam access-gro
 $ ibmcloud iam access-group-policy Public Access -f @policy.json
 ```
 
-For details about the command options, see [`ibmcloud iam access-group-policy-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create).
+For more information about the command options, see [`ibmcloud iam access-group-policy-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create).
 
 ### Assigning access by using the API
 {: #public-access-api}
@@ -107,7 +107,7 @@ For more information, see [Create a policy](https://cloud.ibm.com/apidocs/iam-po
 ## Disabling public access to resources
 {: #disable-public-access}
 
-When you disable public access, all existing policies for the Public Access group are deleted, which means all group members no longer have access to IAM-enabled services. Also, you can't create or modify any policies for public access. 
+When you disable public access, all existing policies for the Public Access group are deleted, which revokes the previously allowed access. You also can't create or modify any policies for the Public Access group. 
 
 ### Disabling access in the console
 {: #disable-public-ui}
