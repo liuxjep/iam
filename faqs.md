@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-10-07"
+lastupdated: "2020-02-14"
 
 keywords: frequently asked question, faq
 
@@ -193,7 +193,7 @@ To delegate the account administrator capabilities, assign the following access:
 
 A user must be assigned an access policy on the specific resource including a at least the Viewer role on the resource group which contains the resource. To assign this type of policy, see [Assigning access to resources](/docs/iam?topic=iam-iammanidaccser#resourceaccess).
 
-## Can every user in my account see all the other users?
+## Can every user in my account see all other users in the account?
 {: #users}
 {: faq}
 
@@ -213,3 +213,19 @@ No. You can invite users, and then assign access later.
 {: faq}
 
 IAM is used to manage access to your {{site.data.keyword.cloud_notm}} services and resources. With {{site.data.keyword.appid_full_notm}}, you can take cloud security one step further by adding authentication into your web and mobile apps. With just a few lines of code, you can easily secure your Cloud-native apps and services that run on {{site.data.keyword.cloud_notm}}. Ready to get started? [Check out the docs](/docs/services/appid?topic=appid-getting-started#getting-started).
+
+## Where do I manage a user's access to infrastructure? 
+{: #infrastructure-devices}
+{: faq}
+{: support}
+
+Access for classic infrastructure starts with the user. For more information, see [Managing classic infrastructure access](/docs/iam?topic=iam-mngclassicinfra).
+
+If you need to assign access to IAM-enabled infrastructure services, such as {{site.data.keyword.vpc_full}}, you assign access to a user or access group from the **Access policies** tab.
+
+## How do I manage access for users previously assigned billing and support permissions in my SoftLayer account?
+{: #migrated-permissions-faq}
+{: faq}
+{: support}
+
+All permissions that were previously assigned in your SoftLayer account can be managed in the {{site.data.keyword.Bluemix_notm}} console. Account permissions for managing billing information and support cases are now available in [migrated permissions access groups](/docs/iam?topic=iam-migrated_permissions). All users who were previously assigned these permissions in your SoftLayer account were migrated to these access groups, which are assigned the same level of access by using an IAM policy on the access group.
