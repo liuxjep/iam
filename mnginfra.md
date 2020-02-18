@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2020
 
-lastupdated: "2020-01-13"
+lastupdated: "2020-02-18"
 
 
 keywords: classic infrastructure access, VPN subnet access, classic infrastructure permissions, device access
@@ -53,7 +53,3 @@ Support center account management access is recommended for users that are worki
 Use the **Auto-assign** option to set how the user gets access to VPN subnets based on their device access. If this option is set to on, the user is automatically assigned access to all subnets for the devices they already have access to. You can set this option to off to manually select subnets from the list.
     
    You can define the type of VPN subnets that the user has access to by using the **VPN type** option. If you select **None**, no VPN access can be assigned. If you have the correct access, you can define the type of VPN subnets that the user has access to by using the VPN type option. If you select None, no VPN access can be assigned. 
-
-
- The PPTP option is deprecated, so if you have this option and clear it, it is no longer available.
- {: deprecated}
