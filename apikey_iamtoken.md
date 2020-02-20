@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-02-18"
 
-keywords: IAM token, token, API key, generate token, access token
+keywords: IAM token, token, API key, generate token, access token, temporary credential
 
 subcollection: iam
 
@@ -18,19 +18,21 @@ subcollection: iam
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'} 
+{:help: data-hd-content-type='help'} 
+{:support: data-reuse='support'}
 
 # Generating an {{site.data.keyword.Bluemix_notm}} IAM token by using an API key
 {: #iamtoken_from_apikey}
-{: help}
+{: help} 
 {: support}
 
 Generate an {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) token by using either your IAM API key or a service ID's API key. {{site.data.keyword.Bluemix_notm}} APIs can be accessed only by users who are authorized by an assigned IAM role. Each user who is calling the API must pass credentials for the API to authenticate.
 {:shortdesc}
 
-You can generate an IAM token by using either your [{{site.data.keyword.Bluemix_notm}} API key](/docs/iam?topic=iam-userapikey#userapikey) or a [service ID's API key](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys). This process is also used if you are developing an application that needs to work with other {{site.data.keyword.Bluemix_notm}} services. You must use a service ID API key to get an access token to be passed to each of the {{site.data.keyword.Bluemix_notm}} services.
+You can generate an IAM token by using either your [{{site.data.keyword.Bluemix_notm}} API key](/docs/iam?topic=iam-userapikey#userapikey) or a [service ID's API key](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys). The API key is a permanent credential that can be reused if you don't lose the API key value or delete the API key in the account. This process is also used if you are developing an application that needs to work with other {{site.data.keyword.Bluemix_notm}} services. You must use a service ID API key to get an access token to be passed to each of the {{site.data.keyword.Bluemix_notm}} services.
 
+An access token is a temporary credential that expires after one hour. After the acquired token expires, you must generate a new token to continue calling {{site.data.keyword.Bluemix_notm}} or service APIs, and you can perform only actions that are allowed by your level of assigned access within an account.
+{: note}
 
 Use the following `curl` command to generate an IAM token by using an API key.
 
