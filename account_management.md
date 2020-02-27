@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-02-05"
+lastupdated: "2020-02-27"
 
 keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service
 
@@ -172,8 +172,8 @@ You can give users access to update account settings, view subscriptions, view o
 |---------------|------------------------------------------------------------------------------------------------------------|
 | Viewer        | View account feature settings <br><br> View subscriptions in account <br><br> View account name            |
 | Operator      | View account feature settings <br><br> View subscriptions in account <br><br> View and change account name |
-| Editor        | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits |
-| Administrator | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> View subscription balances and track usage <br><br> Create an enterprise |
+| Editor        | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications |
+| Administrator | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications <br><br> View subscription balances and track usage <br><br> Create an enterprise |
 {: caption="Table 5. Roles and example actions for the Billing service" caption-side="top"}
 
 It's possible to view subscription balances and usage from the Account settings page, but you can't view the Account settings page with the Viewer or Operator roles. To access the Account settings page and your subscription information from that page, you need the Editor role or higher. 
