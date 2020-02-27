@@ -3,9 +3,9 @@
 copyright:
 
   years: 2018, 2020
-lastupdated: "2020-02-13"
+lastupdated: "2020-02-27"
 
-keywords: advantage of access groups, access assignment process, assign access, best practice, access management, strategy
+keywords: advantages of access groups, access assignment process, assign access, best practice, access management, strategy
 
 subcollection: iam
 
@@ -25,6 +25,22 @@ To streamline the process of assigning access, you can take advantage of access 
 
 To ensure that your account is fully set up for success, check out [Best practices for setting up your account](/docs/account?topic=account-account_setup#account_setup) and [Best practices for organizing resources in resource groups](/docs/resources?topic=resources-bp_resourcegroups#bp_resourcegroups).
 {: tip}
+
+## How IAM access policies provide access
+{: #how_access}
+
+A policy consists of a subject, target, and role. The subject in this case is the access group. The target is what you want the subject to access, such as a set of resources, a service instance, all services in the account, or all instances of a service. The role defines the level of access that is granted to a user.
+
+The most commonly used roles are viewer, editor, and administrator. The viewer role provides the least amount of access for viewing instances and resource groups in an account. The editor role has more access for creating, editing, deleting, and binding service instances. The administrator role includes everything for working with a service instance and can assign access to others. However, two different categories of roles are available to consider: platform and service. For more information about the roles that can be assigned, see [IAM roles](/docs/iam?topic=iam-userroles#iamusermanrol).
+
+## Reducing time and effort managing access
+{: #limit-policies}
+
+There is a [limit](/docs/iam?topic=iam-iam_limits) on the total number of policies that are allowed in account. There are a few strategies that you can use to ensure that you don't reach the limit, and they can help you to reduce the amount of time you spend assigning and managing access in your account:
+
+* Use access groups to organize users and service IDs that all require the same level of access. This way, you can assign a single policy rather than an individual policy for each user or service ID.
+* Use resource groups to organize resources that you want a group of developers in your account to use. Then, if all of those developers are in an access group together, you can use a minimum number of policies instead of assigning policies to each individual developer for each individual resource.
+* Use the principle of least privilege and assign only the access that is required. This can help you ensure that users in your account are limited to only the actions that you want to allow. It also reduces the time that you might need to spend later to delete, update, or reduce assigned access for users that you might not want purchasing and provisioning all types of services in the account. 
 
 ## What is a good access group strategy?
 {: #rg_strategy}
@@ -53,19 +69,12 @@ To create an access group, complete the following steps:
 
 After you create an access group, you can add users and service IDs to the group.
 
-## How IAM access policies provide access
-{: #how_access}
-
-A policy consists of a subject, target, and role. The subject in this case is the access group. The target is what you want the subject to access, such as a set of resources, a service instance, all services in the account, or all instances of a service. The role defines the level of access that is granted to a user.
-
-The most commonly used roles are viewer, editor, and administrator. The viewer role provides the least amount of access for viewing instances and resource groups in an account. The editor role has more access for creating, editing, deleting, and binding service instances. The administrator role includes everything for working with a service instance and can assign access to others. However, two different categories of roles are available to consider: platform and service. For more information about the roles that can be assigned, see [IAM roles](/docs/iam?topic=iam-userroles#iamusermanrol).
-
 ## Assigning access to access groups
 {: #assigning-access}
 
 You can organize resources in a resource group and users and service IDs into an access group to make assigning access as simple as possible. After you set up each one, you can create access policies for the access groups to give users in your account access to the resources that you created.
 
-1. From the **Access policies** tab, click **Assign access**. 
+1. Within the access group management page, select **Access policies**, and click **Assign access**. 
 2. Select **IAM services** or **Account management**.
 3. Select the type of access that you want to assign. <br><br> Some services support the use of advanced operators to grant access to resources that satisfy specific naming conventions. See [Assigning access by using wildcard policies](/docs/iam?topic=iam-wildcard) for more information. 
   
@@ -76,3 +85,5 @@ You can organize resources in a resource group and users and service IDs into an
 
 You can give multiple users administrator access to everything in an account by creating an access group and assigning two policies to it. To create the first policy, use the **IAM services** option, and select **All Identity and Access enabled services** with the Administrator and Manager roles assigned. To create the second policy, use the **Account Management** option, and select **All Account Management Services** with the administrator role assigned.
 {: tip}
+
+
