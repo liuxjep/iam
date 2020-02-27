@@ -6,7 +6,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-02-14"
+lastupdated: "2020-02-27"
 
 keywords: frequently asked question, faq
 
@@ -20,7 +20,7 @@ subcollection: iam
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:faq: data-hd-content-type='faq'}
-{:support: data-reuse='support'} 
+{:support: data-reuse='support'}
 {:note: .note}
 
 # FAQs for IAM
@@ -42,7 +42,7 @@ Identity and Access Management (IAM) enables you to securely authenticate users 
 
 An IAM-enabled service must be in a resource group and access to the service is given by using IAM access policies. When you create an IAM-enabled service from the catalog, you must assign it to a resource group. For more information, see [What is a resource?](/docs/resources?topic=resources-resource#resource)
 
-{{site.data.keyword.containerlong_notm}} is the only exception; it’s IAM-access controlled, but it's always assigned to the default resource group. Therefore, you aren’t given the option to choose one when you create it from the catalog. And, it can’t be assigned to any other resource group.
+{{site.data.keyword.containerlong_notm}} is the only exception; it’s IAM-access controlled, but is always assigned to the default resource group. Therefore, you aren’t given the option to choose one when you create it from the catalog. And, it can’t be assigned to any other resource group.
 
 ## What is an IAM access policy?
 {: #iam-policies}
@@ -70,9 +70,14 @@ The access management systems are entirely different. IAM resources belong to a 
 Go to **Manage** &gt; **Access (IAM)**, and select your name on the Users page. Then, depending on the access you're looking for, open the different tabs:
 
 * To determine what access you have through the access groups you are assigned, select **Access groups**.
-* To see IAM access policies assigned to you, select the **Access policies**.
+* To see IAM access policies that are assigned to you, select the **Access policies**.
 * To see your Cloud Foundry access for all orgs and spaces, select **Cloud Foundry access**.
 
+## What actions are mapped to each IAM role?
+{: #action-mapping}
+{: faq} 
+
+When you invite a new user or assign a user IAM access, you can view the actions that are associated with each role. Click the **Actions for role** option to view a list of all actions that are mapped to a specific role. By reviewing the mapping of actions to roles, you can confidently know what access you're assigning. 
 
 ## How do I request access to a resource?
 {: #request-access}
@@ -86,15 +91,15 @@ The account owner can update your access to any resource in the account, or you 
 
 Go to **Manage** > **Access (IAM)**, and select **Users**. Then, select your name or another user's name from the list. You can find the IAM ID for that user along with their email address on the User details page.
 
-## Why should I use resource groups and access groups?
+## Why use resource groups and access groups?
 {: #resource-groups}
 {: faq}
 
-A resource group is a logical container for resources. When a resource is created, it's assigned to a resource group and can’t be moved after it's added.
+A resource group is a logical container for resources. When a resource is created, you assign it to a resource group and the resource can't be moved.
 
 An access group is used to easily organize a set of users and service IDs into a single entity to make access assignments easy. You can assign a single policy to an access group to grant all members those permissions. If you have more than one user or service ID that needs the same access, create an access group instead of assigning the same access multiple times per individual user or service ID.
 
-By using both resource groups and access groups, you can streamline the access assignment policy by assigning a limited number of policies. You can organize all the resources a specific group of users and service IDs needs access to in a single resource group, group all the users or service IDs into an access group, and then assign a single policy giving access to all resources in the resource group.
+By using both resource groups and access groups, you can streamline the access assignment policy by assigning a limited number of policies. You can organize all of the resources a specific group of users and service IDs needs access to in a single resource group, group all the users or service IDs into an access group, and then assign a single policy that grants access to all resources in the resource group.
 
 For more information, see [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup).
 
@@ -109,6 +114,12 @@ So, minimally the user must have the following access:
 
 * Viewer role or higher on the resource group itself
 * Editor role or higher on the service or all services in the resource group
+
+## What access enables a user to work with a single resource?
+{: #resources-and-rg}
+{: faq}
+
+A user must be assigned an access policy on the specific resource with at least the Viewer role assigned on the resource group itself that contains the resource. To assign this type of policy, see [Assigning access to resources](/docs/iam?topic=iam-iammanidaccser#resourceaccess).
 
 
 ## What access do I need to provide others access?
@@ -161,39 +172,27 @@ Service and platform roles are two different types of roles:
 
 * Service roles define the ability to perform actions on a service and are specific to every service such as performing API calls or accessing the UI. Service roles are: manager, writer, and reader. For more information about how these roles apply, refer to the specific service's documentation.
 
-## What actions are mapped to each IAM role?
-{: #action-mapping}
-{: faq} 
-
-When you invite a new user or assign a user IAM access, you can view the actions that are associated with each role. Click the **Actions for role** option to view a list of all actions that are mapped to a specific role. By reviewing the mapping of actions to roles, you can confidently know what access you're assigning. 
-
 ## What is the difference between a resource group and Cloud Foundry orgs and spaces?
 {: #groups-organizations}
 {: faq}
 
-With the start of {{site.data.keyword.Bluemix_notm}}, an open source platform service for access control and the organization of resources called Cloud Foundry was the single method for organizing and controlling access to resources. As {{site.data.keyword.Bluemix_notm}} has expanded, a new method was needed that might be used by all types of services and resources. Resource groups are now used to group and organize many types of resources, and IAM is used to consistently control access to services and resources. A number of services have already adopted by using resource groups and IAM, and additional services will move over time to the new method for organizing resources and managing access.
+With the start of {{site.data.keyword.Bluemix_notm}}, an open source platform service for access control and the organization of resources called Cloud Foundry was the single method for organizing and controlling access to resources. As {{site.data.keyword.Bluemix_notm}} has expanded, a new method was needed that might be used by all types of services and resources. Resource groups are now used to group and organize many types of resources, and IAM is used to consistently control access to services and resources. A number of services have already adopted by using resource groups and IAM, and more services will move over time to the new method for organizing resources and managing access.
 
 Access control and account resource organization are the major differences between resource groups and Cloud Foundry orgs and spaces. Resource groups organize IAM-enabled services in an account that are access controlled by using IAM policies. Orgs and spaces are managed by using Cloud Foundry roles for access control, and Cloud Foundry resources are assigned to spaces. Orgs and spaces can be used to organize and control access to resources only within the Cloud Foundry realm, while resource groups and IAM can be used for multiple types of resources across {{site.data.keyword.Bluemix_notm}}.
 
-## How do I delegate account administrator capabilities?  
+## How do I assign a user full access as an account administrator?  
 {: #account-administrator}
 {: faq}
 {: support}
 
-To delegate the account administrator capabilities, assign the following access:
+To assign a user in your account full administrator access, go to **Manage > Access (IAM)**, select the user's name, and assign the following access:
 
 * An IAM policy with Administrator and Manager roles on All Identity and Access enabled services, which enables a user to create service instances and assign users access to all resources in the account.
 * An IAM policy with Administrator role on All account management services, which enables a user to complete tasks like inviting and removing users, managing access groups, managing service IDs, managing private catalog offerings, and track billing and usage.
 * The Super user permission set for classic infrastructure
 * Cloud Foundry manager for all orgs
 
-## What access enables a user to work with a single resource?
-{: #resources-and-rg}
-{: faq}
-
-A user must be assigned an access policy on the specific resource including a at least the Viewer role on the resource group which contains the resource. To assign this type of policy, see [Assigning access to resources](/docs/iam?topic=iam-iammanidaccser#resourceaccess).
-
-## Can every user in my account see all other users in the account?
+## Can every user in my account see all the other users?
 {: #users}
 {: faq}
 
@@ -202,11 +201,13 @@ An account owner can view all users in the account and choose how users can view
 * **Unrestricted view**: All users in your account can view everyone else in the account.
 * **Restricted view**: Limits the ability to view users on the Users page to only those who have been granted explicit access, along with those who have visibility of other users through a shared Cloud Foundry org or a classic infrastructure user hierarchy relationship.
 
+
 ## Do I need to assign access to a user when I invite them to the account?
 {: #account-invite}
 {: faq}
 
 No. You can invite users, and then assign access later.
+
 
 ## How do I add authentication into my web and mobile apps?
 {: #appid}
