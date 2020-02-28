@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-01-30"
+lastupdated: "2020-02-28"
 
 keywords: remove user, delete user
 
@@ -34,7 +34,7 @@ To remove a user from an account, complete the following steps:
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. From the row of the user that you want to remove, select **Remove user** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 
-Any resources that are created by the user remain in the account. However, the user no longer has access to work with those resources. So the account owner or an administrator for that service or service instance can assign other users to work with the resources, or delete them from the account.
+Any resources that are created by the user remain in the account, but any {{site.data.keyword.cloud_notm}} API keys that the user created are removed. The user no longer has access to work with the resources they created. The account owner or an administrator for the service or service instance can assign other users to work with the resources, or delete them from the account.
 
 If you get an error message that states a classic infrastructure user can't be removed, make sure that any descendants in the user hierarchy for that user are [assigned a new parent](/docs/iam?topic=iam-update-parent), [disabled in the account](/docs/iam?topic=iam-status), or deleted. Then, you can try again.
 {: tip}
