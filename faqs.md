@@ -190,7 +190,7 @@ To assign a user in your account full administrator access, go to **Manage > Acc
 * An IAM policy with Administrator and Manager roles on All Identity and Access enabled services, which enables a user to create service instances and assign users access to all resources in the account.
 * An IAM policy with Administrator role on All account management services, which enables a user to complete tasks like inviting and removing users, managing access groups, managing service IDs, managing private catalog offerings, and track billing and usage.
 * The Super user permission set for classic infrastructure
-* Cloud Foundry manager for all orgs
+* Cloud Foundry manager for all orgs, but only account owners can create the orgs.
 
 ## Can every user in my account see all the other users?
 {: #users}
