@@ -118,9 +118,13 @@
   "account-administrator":[   
      "delegate account administrator capabilities",
      "give someone admin capabilities for the account",
-     "assign someone else administrator rights for the account",
+     "assign someone else full administrator rights for the account",
+     "give full administrator access",
+     "full access to the account",
      "delegate admin access",
+     "full administrator access",
      "give someone an Admin role",
+     "assign a user full access as an account administrator",
      "assign an Administrator role"
      ],
   "resources-and-rg":[   
@@ -151,6 +155,22 @@
      "how to secure my apps and services",
      "add security to my apps"
      ],
+  "infrastructure-devices":[
+    "manage a user's access to infrastructure",
+    "manage user access to infrastructure",
+    "management of user access in infrastructure",
+    "manage a user's access for classic infrastructure",
+    "Access for classic infrastructure management",
+    "assign access to IAM-enabled infrastructure services",
+    "access for IAM enabled infrastructure services"
+      ],
+   "migrated-permissions-faq":[
+     "manage access for users previously in softlayer",
+     "manage permissions that used to be in Softlayer",
+     "manage migrated permissions access",
+     "billing and support permissions in my SoftLayer account management",
+     "migrated permissions access management"
+      ],
   "troubleshoot-serviceaccess":[   
      "can't access a resource from the Resource list page",
      "cant access the services on the Resource list",
@@ -186,5 +206,13 @@
      "manage permissions for migrated billing",
      "migrated permissions access groups might not have been assigned the correct access",
      "migrated billing and support case permission"
-     ]
+     ],
+  "troubleshoot-policy-limit":[
+     "error message that I reached the limit of access policies ",
+     "can't assign access in my account because I reached the max number of allowed policies",
+     "new policy can't be created to assign access",
+     "422: Exceeded maximum policies quota error",
+     "error 422 exceeded maximum policies",
+     "limit of total number of policies allowed"
+    ]
  }
