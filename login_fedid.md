@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2020
 
-lastupdated: "2020-02-18"
+lastupdated: "2020-03-16"
 
 keywords: federated ID, enterprise SSO, single sign-on ID, API key login, one-time passcode login, temporary credential
 
@@ -99,10 +99,10 @@ You can log in with a one time passcode by using the following steps:
 
 The required API key is the {{site.data.keyword.Bluemix_notm}} API key that is used to authenticate with the {{site.data.keyword.Bluemix_notm}} platform, not the classic infrastructure API key, or {{site.data.keyword.Bluemix_notm}} service API key.
 
-1. Create an API key with the [`ibmcloud iam api-key-create` command](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_key_create). Use the `-f` option to generate an API key file instead of showing the key in the command window:
+1. Create an API key with the [`ibmcloud iam api-key-create` command](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_key_create). Use the `--file` option to generate an API key file instead of showing the key in the command window:
 
    ```
-   ibmcloud iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
+   ibmcloud iam api-key-create NAME [-d DESCRIPTION] [--file FILE]
 
    ```
 
