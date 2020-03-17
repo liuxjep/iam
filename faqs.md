@@ -6,7 +6,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-16"
 
 keywords: frequently asked question, faq
 
@@ -141,7 +141,7 @@ When you have access to manage a resource group, you can view, edit the name, an
 
 When you have access to resources within a resource group, you can edit, delete, and create instances, or have all management actions for the specified services within the resource group depending on the assigned role.
 
-For example, platform management roles and actions for account management services, see [Platform roles table](/docs/iam?topic=iam-userroles#platformrolestable2).
+For example, platform management roles and actions for account management services, see [Platform roles table](/docs/iam?topic=iam-userroles#platformroles).
 
 ## Who can remove users?
 {: #remove-users}
