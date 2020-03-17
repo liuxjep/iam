@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="iam" category="platform_services" audience="platform" href="/docs/iam?topic=iam-getstarted" console-page="/iam/overview" path="iam"}
+{: .toc subcollection="iam" category="platform_services" audience="platform" href="/docs/iam?topic=iam-getstarted" console-page="/iam/overview" product-page="https://www.ibm.com/cloud" path="iam"}
 Managing identity and access
 
     {: .navgroup id="learn"}
