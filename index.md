@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2017, 2019
+  years: 2017, 2020
 
-lastupdated: "2019-08-20"
+lastupdated: "2020-03-16"
 
 keywords: what is IAM, IAM features, IAM API
 
@@ -39,7 +39,7 @@ second type of identity that is used in an account. Service IDs are used to prov
 
 You can use {{site.data.keyword.cloud_notm}} API keys to authenticate with an API or CLI as a user or service ID. These API keys are provided through {{site.data.keyword.Bluemix_notm}} IAM and therefore cannot be used generally to authenticate with IBMid outside of {{site.data.keyword.cloud_notm}}. You can also use a single classic infrastructure API key to access classic infrastructure APIs; however, this is not required as you can use {{site.data.keyword.cloud_notm}} API keys to access the same APIs.
 
-The final piece of the identity concept in IAM is {{site.data.keyword.Bluemix_notm}} resources, which are identified by their cloud resource names (CRN). For more information, see [Cloud Resource Names](/docs/overview?topic=overview-crn#crn).
+The final piece of the identity concept in IAM is {{site.data.keyword.Bluemix_notm}} resources, which are identified by their cloud resource names (CRN). For more information, see [Cloud Resource Names](/docs/resources?topic=resources-crn#crn).
 
 ## Access management
 
@@ -80,7 +80,7 @@ For more information, see [IAM roles](/docs/iam?topic=iam-userroles#iamusermanro
 ### Actions
 {: #iam-roles-actions}
 
-Actions are mapped to the {{site.data.keyword.Bluemix_notm}} IAM roles so that users perform only specific tasks when they are assigned the different roles. Sometimes actions are also referred to as permissions. Allowable actions for each role might change based on the service that is being accessed, because each service defines how that role maps to the use of the service.
+Actions are mapped to the {{site.data.keyword.Bluemix_notm}} IAM roles so that users perform only specific tasks when they are assigned the different roles. Sometimes actions are also referred to as permissions. Allowable actions for each role might change based on the service that is being accessed because each service defines how that role maps to the use of the service.
 
 ### Access management system
 {: #access-management-system}
