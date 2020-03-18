@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2017, 2019
+  years: 2017, 2020
 
-lastupdated: "2019-12-11"
+lastupdated: "2020-03-18"
 
 keywords: authorizations, service to service access, access between services, dependent service, source service, target service, assigned access, access policies
 
@@ -43,7 +43,8 @@ You must have access to the target service to create an authorization between se
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Authorizations**.
 2. Click **Create**.
-3. Select a source, target service, and optionally, a target service instance for the authorization. The source service is given access to the selected target service.
+3. Select a source service and specify whether you want the authorization to be for all instances or only a specific instance in the account or instances only in a certain resource group. 
+4. Select a target service and specify whether you want the authorization to be for all instances or only a specific instance in the account or instances only in a certain resource group.
 4. Optional: Select **Enable authorization to be delegated** to allow the source service to delegate its access to any dependent services. This option is displayed only if the source service has dependent services. By selecting this option, policies are automatically created by the source service for the dependent services.
 5. Select a role to assign access to the source service that accesses the target service.
 6. Click **Authorize**.
