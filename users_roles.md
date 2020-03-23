@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2019
+  years: 2015, 2020
 
-lastupdated: "2019-06-04"
+lastupdated: "2020-03-23"
 
 keywords: IAM access, access policy, IAM roles, platform management roles, service access roles, types of access policies
 
@@ -36,11 +36,11 @@ The following graphic helps to explain how the IAM policy is created. Policies a
 
 You can assign and manage policies if you have the proper role. The following table shows policy management tasks and the role that is required for each.
 
-| Action | Required Role |
-|----------|---------|
-| Create a policy in an account for all services and instances | Account owner or administrator on all account management services and all Identity and Access enabled services |
-| Create a policy on a service in an account | Account owner, administrator on all Identity and Access enabled services, or administrator on the service in the account |
-| Create a policy on a service instance | Account owner, administrator on all Identity and Access enabled services, administrator on the service in the account, administrator on all services in the relevant resource group, or administrator on the service instance |
+| Action                                                       | Required Role                                                                                                            |
+|--------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| Create a policy in an account for all services and instances | Account owner or administrator on all account management services and all Identity and Access enabled services           |
+| Create a policy on a service in an account                   | Account owner, administrator on all Identity and Access enabled services, or administrator on the service in the account |
+| Create a policy on a service instance                        | Account owner, administrator on all Identity and Access enabled services, administrator on the service in the account, administrator on all services in the relevant resource group, or administrator on the service instance |
 {: caption="Table 1. Users allowed to create access policies" caption-side="top"}
 
 
@@ -66,37 +66,42 @@ To grant another user full access to the account for the purposes of managing us
 
 With Cloud IAM, you can manage and define access for users and resources in your account. Two types of roles can be assigned: platform management roles and service access roles.
 
-<dl>
-<dt>Platform management roles</dt>
-<dd>Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to [account management services](/docs/iam?topic=iam-account-services#account-services) that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.</dd>
-<dt>Service access roles</dt>
-<dd>Service access roles define a user or service’s ability to perform actions on a service instance, such as accessing the console or performing API calls. The service access roles are manager, writer, and reader. </dd>
-</dl>
+* Platform management roles
+
+Platform management roles cover a range of actions, including the ability to create and delete instances, manage aliases, bindings, and credentials, and manage access. The platform roles are administrator, editor, operator, viewer. Platform management roles also apply to [account management services](/docs/iam?topic=iam-account-services#account-services) that enable users to invite users, manage service IDs, access policies, catalog entries, and track billing and usage depending on their assigned role on an account management service.
+
+* Service access roles
+
+Service access roles define a user or service’s ability to perform actions on a service instance, such as accessing the console or performing API calls. The service access roles are manager, writer, and reader. 
 
 You might not see all of the roles that are listed here as options when you assign policies in the UI because only the roles available for the service that you chose are displayed. For more information on what roles are enabled and what actions each access role allows for each service, see the documentation for that service.
 {: note}
+
+* Custom roles
+
+An account owner or a user assigned the Administrator role on the Role management service can create custom roles for a service on the IAM Roles page. 
 
 ### Platform management roles
 {: #platformroles}
 
 With platform management roles, users can be assigned varying levels of permission for performing platform actions within the account and on a service. For example, platform management roles that are assigned for catalog resources enable users to complete actions such as creating, deleting, editing, and viewing service instances. And, the platform management roles that are assigned for account management services enable users to complete actions such as inviting and removing users, working with resource groups, and viewing billing information. For more information about the account management services, see [Assigning access to account management services](/docs/iam?topic=iam-account-services#account-services).
 
-Select all roles that apply when creating a policy. Each role allows separate actions to be completed and doesn't inherit the actions of the lesser roles.
+Select all roles that apply when you create a policy. Each role allows separate actions to be completed and doesn't inherit the actions of the lesser roles.
 {: tip}
 
 The following table provides examples for some of the platform management actions that users can take within the context of catalog resources and resource groups. See the documentation for each catalog offering to understand how the roles apply to users within the context of the service that is being used.
 
 
-|  | One or all IAM-enabled services | Selected service in a resource group | Selected resource group |
-|:--------------|:------------|:-------------|:-------------|
-| Viewer role | View instances, aliases, bindings, and credentials | View only specified instances in the resource group | View resource group |
-| Operator role |  View instances and manage aliases, bindings, and credentials |  Not applicable | Not applicable |
-| Editor role |  Create, delete, edit, and view instances. Manage aliases, bindings, and credentials | Create, delete, edit, suspend, resume, view, and bind only specified instances in the resource group | View and edit name of resource group |
-| Administrator role |  All management actions for services | All management actions for the specified instances in the resource group | View, edit, and manage access for the resource group |
+|                    | One or all IAM-enabled services                                                      | Selected service in a resource group                | Selected resource group |
+|--------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------|-------------------------|
+| Viewer role        | View instances, aliases, bindings, and credentials                                   | View only specified instances in the resource group | View resource group     |
+| Operator role      |  View instances and manage aliases, bindings, and credentials                        |  Not applicable                                     | Not applicable          |
+| Editor role        |  Create, delete, edit, and view instances. Manage aliases, bindings, and credentials | Create, delete, edit, suspend, resume, view, and bind only specified instances in the resource group | View and edit name of resource group |
+| Administrator role |  All management actions for services                                                 | All management actions for the specified instances in the resource group | View, edit, and manage access for the resource group |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="Table 2. Example platform management roles and actions for services in an account" caption-side="top"}
-{: summary="The first row of the table describes separate options that you can choose from when creating a policy, and the first column describes the selected roles for the policy. The remaining cells map to which role is selected from the first column, and which type of policy has been selected from the options in the first row."}
+{: summary="The first row of the table describes separate options that you can choose from when creating a policy, and the first column describes the selected roles for the policy. The remaining cells map to the selected role from the first column, and to the selected policy policy from the first row."}
 {: #platformrolestable1}
 
 For information about the specific actions users can take based on their assigned role on account management services, see [Assigning access to account management services](/docs/iam?topic=iam-account-services).
@@ -104,12 +109,12 @@ For information about the specific actions users can take based on their assigne
 
 Some services might map specific actions to the platform management roles that are related to the management of the service rather than to the access of the service. As an example, see the following table that details the {{site.data.keyword.containershort_notm}} service actions that are mapped to these roles.
 
-| Platform Management Role | Actions | Example Actions for {{site.data.keyword.containershort_notm}} |
-|:-----------------|:-----------------|:-----------------|
-| Viewer | Can view service instances, but can't modify them  | <ul><li>List clusters</li><li>View details for a cluster</li></ul>|
-| Editor | Perform all platform actions except for managing the account and assigning access policies |<ul><li>Bind a service to a cluster</li><li>Create a webhook</li></ul> |
-| Operator | Perform platform actions required to configure and operate service instances, such as viewing a service's dashboard | <ul><li>Add or remove worker nodes</li><li>Restart or reload worker nodes</li><li>Bind a service to a cluster</li></ul> |
-| Administrator | Perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users |<ul><li>Remove a cluster</li><li>Create a cluster</li><li>Update user access policies</li><li>All actions a viewer, editor, and operator can perform</li></ul>|
+| Platform Management Role | Actions                                                                                                    | Example Actions for {{site.data.keyword.containershort_notm}} |
+|--------------------------|------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
+| Viewer                   | Can view service instances, but can't modify them                                                          | <ul><li>List clusters</li><li>View details for a cluster</li></ul>|
+| Editor                   | Perform all platform actions except for managing the account and assigning access policies                 |<ul><li>Bind a service to a cluster</li><li>Create a webhook</li></ul> |
+| Operator                 | Perform platform actions required to configure and operate service instances, such as viewing a service's dashboard | <ul><li>Add or remove worker nodes</li><li>Restart or reload worker nodes</li><li>Bind a service to a cluster</li></ul> |
+| Administrator            | Perform all platform actions based on the resource this role is being assigned, including assigning access policies to other users |<ul><li>Remove a cluster</li><li>Create a cluster</li><li>Update user access policies</li><li>All actions a viewer, editor, and operator can perform</li></ul>|
 {: caption="Table 3. Example platform management roles and actions for {{site.data.keyword.containershort_notm}} service" caption-side="top"}
 
 ### Service access roles
@@ -120,9 +125,16 @@ Service access roles enable users to be assigned different levels of permission 
 The actions that can be taken based on each assigned role vary based on the service that you selected for the policy. Not all services use these types of roles. See the documentation for the service for more details.
 {: note}
 
-| Service Access Role | Actions | Example Actions for {{site.data.keyword.objectstorageshort}} Service |
-|:-----------------|:-----------------|:-----------------|
-|  Reader | Perform read-only actions within a service, such as viewing service-specific resources | List and download objects |
-| Writer | Permissions beyond the reader role, including creating and editing service-specific resources | Create and destroy buckets and objects |
-| Manager | Permissions beyond the writer role to complete privileged actions as defined by the service, plus create and edit service-specific resources | Manage all aspects of data storage, create and destroy buckets and objects |
+| Service Access Role | Actions                                                                                       | Example Actions for {{site.data.keyword.objectstorageshort}} Service |
+|---------------------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Reader              | Perform read-only actions within a service, such as viewing service-specific resources        | List and download objects                                            |
+| Writer              | Permissions beyond the reader role, including creating and editing service-specific resources | Create and destroy buckets and objects                               |
+| Manager             | Permissions beyond the writer role to complete privileged actions as defined by the service, plus create and edit service-specific resources | Manage all aspects of data storage, create, and destroy buckets and objects |
 {: caption="Table 4. Example service access user roles and actions" caption-side="top"}
+
+### Custom access roles
+{: #custom-access}
+
+An account owner or a user assigned the Administrator role on the Role management service can create custom roles for a service on the IAM Roles page. Any number of actions that are available for a service for any platform or service role can be combined and added to a custom named role. 
+
+After the role is created, any user who can assign access for that service sees the new custom role as an option. For more information, see [Creating custom roles](/docs/iam?topic=iam-custom-roles).

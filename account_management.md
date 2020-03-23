@@ -4,9 +4,9 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-09"
 
-keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service
+keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service, role management service
 
 subcollection: iam
 
@@ -69,6 +69,7 @@ If you're using the [Policy management API](https://cloud.ibm.com/apidocs/iam-po
 | Global catalog | serviceName=globalcatalog |
 | Enterprise | serviceName=enterprise |
 | License and entitlement | serviceName=entitlement | 
+| Role management | serviceName=iam-access-management |
 | All account management services | serviceType=platform_service (don't include a serviceName attribute)  | 
 {: caption="Table 1. Account management service names for API calls" caption-side="top"}
 
@@ -184,14 +185,27 @@ It's possible to view subscription balances and usage from the Account settings 
 
 You can give users access to manage service IDs by using the IAM identity service. For the IAM identity service, these actions apply to service IDs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies. This account management service applies to the ability to view, update, delete, and assign access to service IDs in the account created by other users.
 
-| Roles         | Actions                                                                                                                           |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| Viewer        | View IDs                                                                                                                          |
-| Operator      | Create and delete IDs and API keys                                                 |
-| Editor        | Create, update, and delete IDs and API keys                                                         |
+| Roles         | Actions                                                                                           |
+|---------------|----------------------------------------------------------------------------------------------------|
+| Viewer        | View IDs              |
+| Operator      | Create and delete IDs and API keys <br>        |
+| Editor        | Create, update, and delete IDs and API keys       |
 | Administrator | Create, update, and delete IDs and API keys <br><br> Assign access policies to IDs  |
 {: caption="Table 6. Roles and example actions for the IAM Identity service" caption-side="top"}
 {: #identity-service-acct-mgmt}
+
+### Role management
+{: #custom-roles-account-management}
+
+You can give users access to create, update, and delete custom roles for services in the account. 
+
+| Roles         | Actions                                                                                                                                                    |
+|---------------|------------------------------------|
+| Viewer        | Not applicable         |
+| Operator      | Not applicable             |
+| Editor        | Edit and update custom roles in an account          |
+| Administrator | Create, edit, update, and delete custom roles in an account  |
+{: caption="Table 7. Roles and example actions for the Role management service" caption-side="top"}
 
 
 ### Global catalog
@@ -205,7 +219,7 @@ You can give users access to view private services in the catalog or change the 
 | Operator      | Not applicable                                                                                         |
 | Editor        | Change object metadata but can't change visibility for private services                                |
 | Administrator | Change object metadata or visibility for private services, and restrict visibility of a public service |
-{: caption="Table 7. Roles and example actions for the Global Catalog service" caption-side="top"}
+{: caption="Table 8. Roles and example actions for the Global Catalog service" caption-side="top"}
 
 
 ### Enterprise
@@ -220,7 +234,7 @@ You can use the enterprise service to assign users access to manage an enterpris
 | Editor              | View and update the enterprise name and domain, create accounts and account groups, view usage reports, and import accounts. |
 | Administrator       | View and update the enterprise name and domain, create accounts and account groups, move accounts between account groups, import existing accounts, and view usage reports |
 | Usage report viewer | View the enterprise, accounts, and account groups and view usage reports for all accounts in the enterprise.                               |
-{: caption="Table 8. Roles and example actions for the Enterprise service" caption-side="top"}
+{: caption="Table 9. Roles and example actions for the Enterprise service" caption-side="top"}
 
 
 ### License and entitlement 
@@ -234,7 +248,7 @@ You can use the license and entitlement service to assign users access to manage
 | Operator      |  Not applicable                                                                                            |
 | Editor        |  Editors can create entitlements and view, update, bind, or delete only the entitlements they acquired.    |
 | Administrator |  Administrators can create entitlements and view, update, bind, or delete any entitlements in the account. |
-{: caption="Table 9. Roles and example actions for the license and entitlement service" caption-side="top"}
+{: caption="Table 10. Roles and example actions for the license and entitlement service" caption-side="top"}
 
 ### All account management services option
 {: #all-account-management}
@@ -248,5 +262,4 @@ To quickly give users a wide-ranging set of account management access, you can a
 | Operator      | All operator role actions for the account management services                                                |
 | Editor        | All editor role actions for the account management services and the ability to create resource groups        |
 | Administrator | All administrator role actions for the account management services and the ability to create resource groups |
-{: caption="Table 10. Roles and example actions for a policy on all identity and access services" caption-side="top"}
-
+{: caption="Table 11. Roles and example actions for a policy on all identity and access services" caption-side="top"}
