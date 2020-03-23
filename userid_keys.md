@@ -18,6 +18,7 @@ subcollection: iam
 {:help: data-hd-content-type='help'}
 {:new_window: target="_blank"}
 {:note: .note}
+{:tip: .tip}
 
 # Managing user API keys
 {: #userapikey}
