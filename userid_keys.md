@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-03-23"
 
 keywords: API key, user API keys, IBM Cloud API keys, manage user keys, create API key
 
@@ -14,17 +14,28 @@ subcollection: iam
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:new_window: target="_blank"}
+{:support: data-reuse='support'}
 {:help: data-hd-content-type='help'}
-{:support: data-reuse='support'} 
+{:new_window: target="_blank"}
+{:note: .note}
 
 # Managing user API keys
 {: #userapikey}
 
-A federated user or non-federated user can create an API key to use on the CLI or as part of automation to log in as your user identity. You can use the UI or the CLI to manage your API keys by listing your keys, creating keys, updating keys, or deleting keys. To manage the {{site.data.keyword.Bluemix_notm}} API keys that are associated with your user identity, go to **Manage** &gt; **Access (IAM)** &gt; **IBM Cloud API keys**. Then, you can create, edit, or delete API keys. And, for a full list of available CLI commands, see [`ibmcloud iam api-keys`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_api_keys).
+A federated user or non-federated user can create an API key to use in the CLI or as part of automation to log in as your user identity. You can use the console, CLI, or API to manage your {{site.data.keyword.cloud}} API keys by listing your keys, creating keys, updating keys, or deleting keys. 
+{: shortdesc}
+
 
 As a [federated user](/docs/account?topic=account-signup#signup), you can use an API key to log in by using the `IBMCLOUD_API_KEY` environment variable. For more information about using an API key for logging in, see [Logging in with a federated ID](/docs/iam?topic=iam-federated_id#federated_id).
-{:shortdesc}
+{: note}
+
+To manage the {{site.data.keyword.Bluemix_notm}} API keys that are associated with your user identity or the ones that you have access to manage for other users in the account, go to **Manage** &gt; **Access (IAM)** &gt; **API keys**. On the API keys page, you can create, edit, or delete {{site.data.keyword.cloud_notm}} API keys for yourself, and you can manage all [classic infrastructure API keys](/docs/iam?topic=iam-classic_keys) for users that you are an ancestor of in the user hierarchy. In addition, if you are the account owner or a user assigned the required access to manage other user's API keys in the account, you can use the **View** filter to list and manage those API keys too.
+
+| Filter Options | Displayed API Keys | Required Access | Allowed Actions |
+|-------------------|------------------|------------------|-------------|
+| My {{site.data.keyword.cloud_notm}} API keys      | Your IBM Cloud API keys | No access required | View, create, edit, delete |
+| All user {{site.data.keyword.cloud_notm}} API keys | All IBM Cloud API keys created by all users in the account | Administrator role on IAM Identity service | View, edit, and delete |
+{: caption="Table 1. Required access for API key management on the API keys page" caption-side="top"}
 
 ## Creating an API key
 {: #create_user_key}
@@ -35,7 +46,7 @@ As an {{site.data.keyword.Bluemix_notm}} user you might want to use an API key w
 
 To create an API key for your user identity in the UI, complete the following steps:
 
-1. Go to **Manage** &gt; **Access (IAM)** &gt; **IBM Cloud API keys**.
+1. Go to **Manage** &gt; **Access (IAM)** &gt; **API keys**.
 2. Click **Create an {{site.data.keyword.Bluemix_notm}} API key**.
 3. Enter a name and description for your API key.
 4. Click **Create**.
@@ -60,10 +71,13 @@ If you want to change the name or the description of an API key, complete the fo
 
 To edit an API key, complete the following steps:
 
-1. Go to **Manage** &gt; **Access (IAM)** &gt; **IBM Cloud API keys**.
+1. Go to **Manage** &gt; **Access (IAM)** &gt; **API keys**.
 2. Identify the row of the API key that you want to update, and select **Edit** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 3. Update the information for your API key.
 4. Click **Apply**.
+
+To edit an API key that is not your own, but you have access to manage, go to the API keys page. Then, select the **All user {{site.data.keyword.cloud_notm}} API keys** option from the **View** menu to find the API key.
+{: tip}
 
 To edit an API key by using the CLI, enter the following command:
 
@@ -81,7 +95,7 @@ For platform API keys that represent your user identity you can prevent the API 
 ### Locking and unlocking an API key from the UI
 {: #lockui}
 
-1. Go to **Manage** &gt; **Access (IAM)** &gt; **IBM Cloud API keys**.
+1. Go to **Manage** &gt; **Access (IAM)** &gt; **API keys**.
 2. Identify the row of the API key that you want to lock, and select **Lock** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 
 You can unlock your API key at any time to update or remove the API key from your account. Select the API key from the table that you want to unlock and select **Unlock** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
@@ -150,9 +164,12 @@ If you are using a key rotation strategy, you might want to delete an older key 
 
 To delete an API key, complete the following steps:
 
-1. Go to **Manage** &gt; **Access (IAM)** &gt; **IBM Cloud API keys**.
+1. Go to **Manage** &gt; **Access (IAM)** &gt; **API keys**.
 2. Identify the row of the API key that you want to delete, and select **Delete** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 3. Then, confirm the deletion by clicking **Delete**.
+
+To delete an API key that is not your own, but you have access to manage, go to the API keys page. Then, select the **All user {{site.data.keyword.cloud_notm}} API keys** option from the **View** menu to find the API key.
+{: tip}
 
 To delete an API key by using the CLI:
 1. Enter `ibmcloud iam api-key-delete NAME` in your command prompt, specifying the name of the key to delete.
