@@ -53,6 +53,6 @@ If you are an ancestor in the classic infrastructure hierarchy for a user, you c
 Only users who create the API key can retrieve the API key value after it's created.
 {: note}
 
-Go to **Manage** > **Access (IAM)** > **API keys**, and select **Classic infrastructure API keys**. Then, select the action that you want to perform from the **Actions** [List of actions icon](../icons/action-menu-icon.svg) menu, whether it's to view the details or delete the API key.
+Go to **Manage** > **Access (IAM)** > **API keys**, and select **Classic infrastructure API keys**. Then, select the action that you want to perform from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, whether it's to view the details or delete the API key.
 
 
