@@ -182,7 +182,7 @@ It's possible to view subscription balances and usage from the Account settings 
 ### IAM identity service
 {: #identity-service-account-management}
 
-You can give users access to manage service IDs and Identity Providers (IDPs) by using the IAM identity service. For the IAM identity service, these actions apply to service IDs and IDPs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies, but only users with the Operator and Administrator role can create IDPs. This account management service applies to the ability to view, delete, and assign access to service IDs in the account created by other users. For more information about IDPs, see [Managing authentication](/docs/services/appid?topic=appid-managing-idp). 
+You can give users access to manage service IDs by using the IAM identity service. For the IAM identity service, these actions apply to service IDs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies. This account management service applies to the ability to view, update, delete, and assign access to service IDs in the account created by other users.
 
 | Roles         | Actions                                                                                                                           |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------|
