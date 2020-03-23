@@ -33,6 +33,7 @@ The following table lists the maximum limits for {{site.data.keyword.Bluemix_not
 | Dynamic rules per access group         | 5    |
 | Policies per account                   | 2010 |
 | Policies per subject within an account | 500  |
+| Custom roles per account               | 40   |
 {:caption="Table 1. IAM Account Limits" caption-side="top"}
 
 A maximum of 1,000 policies and service to service authorizations within one account is recommended to ensure optimal performance within your account. For more information about limiting the number of policies in your account, see the [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup).
