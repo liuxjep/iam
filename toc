@@ -37,6 +37,7 @@ Managing identity and access
     Managing access
         groups.md
         mngiam.md
+        roles-management.md
         wildcard.md
         account_management.md
         public_access.md
