@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-03-25"
 
 keywords: MFA, multifactor authentication, IBMid MFA, two-factor authentication, account MFA, time-based one-time passcode, TOTP
 
@@ -40,7 +40,7 @@ Review the following considerations before you enable IBMid MFA for your account
   * Choose a date and time that you plan to enable MFA that results in the least impact to your business.
   * Notify your account users after you enable MFA with information on how to [get set up](/docs/iam?topic=iam-enablemfa#setupapp).
 
-When the multifactor authentication account setting is enabled, all IBMid users in your account are prompted for IBMid MFA authentication upon login. If you have other MFA methods set up for any IBMid users in your account, they are no longer prompted for those MFA methods.
+When the multifactor authentication account setting is enabled, all IBMid users in your account are prompted for IBMid MFA authentication upon login. If you have other MFA methods set up for any IBMid users in your account, they are no longer prompted for those MFA methods. For example, if you previously enabled 2FA in the customer portal for your classic infrastructure resources, the MFA account setting overrides the 2FA option. 
 {: tip}
 
 ## Enabling MFA for all users in your account
