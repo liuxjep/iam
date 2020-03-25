@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2020
-lastupdated: "2020-03-23"
+lastupdated: "2020-03-25"
 
 keywords: application programming interface key, API key, API, classic infrastructure API key, IBM Cloud API key
 
@@ -28,7 +28,7 @@ To view your API keys, go to **Manage** > **Access (IAM)** > **API keys**.
 ## {{site.data.keyword.cloud_notm}} API keys for users
 {: #ibm-cloud-api-keys}
 
-{{site.data.keyword.cloud}} API keys are associated with the user's identity. Only the user for which the API key is associated with can create and delete it. You can use the {{site.data.keyword.cloud_notm}} API keys in the command-line interface (CLI) or as part of automation to log in as your user identity. You can also use {{site.data.keyword.cloud_notm}} API keys to access classic infrastructure APIs. For more information about using an API key associated with your user identity, see [Managing user API keys](/docs/iam?topic=iam-userapikey#userapikey).
+{{site.data.keyword.cloud}} API keys are associated with the user's identity. Only the user for which the API key is associated and an Administrator for the Identity Service can delete it. You can use the {{site.data.keyword.cloud_notm}} API keys in the command-line interface (CLI) or as part of automation to log in as your user identity. You can also use {{site.data.keyword.cloud_notm}} API keys to access classic infrastructure APIs. For more information about using an API key associated with your user identity, see [Managing user API keys](/docs/iam?topic=iam-userapikey#userapikey).
 
 
 ## Other types of API keys
