@@ -58,7 +58,7 @@ Custom roles can't be created for the all account management services or all IAM
 1. Select a service that you want to create the role for.
 1. Review the available actions, and select **Add** for all actions that you want in your new role.
 
-   You must add at least one service-defined role to successfully create the new role. If you aren't sure which actions are defined by the service, look in the Type column.
+   You must add at least one service-defined action to successfully create the new role. If you aren't sure which actions are defined by the service, look in the Type column.
    {: important}
    
 1. Click **Create** when you're done adding actions.
