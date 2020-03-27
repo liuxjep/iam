@@ -20,7 +20,7 @@ subcollection: iam
 {:note: .note}
 {:deprecated: .deprecated}
 
-# IAM events tracking
+# Auditing events for IAM
 {: #tracking}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
