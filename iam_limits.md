@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-04-08"
 
 keywords: maximum limits, limits, maximum policies
 
@@ -39,6 +39,55 @@ The following table lists the maximum limits for {{site.data.keyword.Bluemix_not
 A maximum of 1,000 policies and service to service authorizations within one account is recommended to ensure optimal performance within your account. For more information about limiting the number of policies in your account, see the [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup).
 {: tip}
 
+## Checking the number of policies in an account 
+{: #number-policies}
+
+If you aren't sure how many policies are in your account, and you want to ensure that you avoid reaching the limit, you can check how many policies are in your account and work to reduce policies as you approach the limit. You must be the account owner or administrator for all account management services to check how many policies exist in the account.
+
+### Getting the total number of policies per account
+{:# total-number-policies}
+
+To get the total number of policies per account, you can use the [IAM Policy Management API](/apidocs/iam-policy-management#get-policies-by-attributes):
+
+1. Log in to [IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started):
+2. Generate your IAM access token: 
+    ```
+       ibmcloud iam oauth-tokens
+    ```
+3. Enter the following `curl` command to get a total number of policies in one account. You might want to install `jq` to format the JSON, which is used in the folling examples: 
+    ```
+       curl --location --request GET "https://iam.cloud.ibm.com/v1/policies?account_id=<account_id>" \
+         --header "Content-Type: application/json" \
+         --header "Authorization: <IAM TOKEN>" | jq -r .policies | jq '. | length'
+    ```
+In the following example output the last line displays the total number of policies:
+    ```
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+      100  2919  100  2919    0     0   3918      0 --:--:-- --:--:-- --:--:--  3912
+      351
+    ```
+
+### Getting the total of a specific type of policies per account
+{: #total-policies-by-type}
+
+To get the total number of policies for a specific subject, you can use the [IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started):
+
+Log in, and select your account to run the appropiate CLI command. You might want to install `jq` to format JSON in the CLI output.
+  
+* To get count of policies for a service id:
+    ```
+       ibmcloud iam service-policies <service-id> -f --output JSON | jq '. | length'
+    ```
+* To get count of policies for a username(email):
+    ```
+       ibmcloud iam user-policies <username> -f --output JSON | jq '. | length'
+    ```
+* To get count of policies for an access group id:
+    ```
+    ibmcloud iam access-group-policies <access-group> -f --output JSON | jq '. | length'
+    ```
+
 ## Requesting a policy limit increase
 {: #limit-increase}
 
@@ -61,3 +110,4 @@ If you meet all of the listed criteria, you can request a policy limit increase 
 
 You are notified of the update to your policy limits through the case.
 {: note}
+
