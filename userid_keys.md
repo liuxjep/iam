@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2020
-lastupdated: "2020-03-23"
+lastupdated: "2020-04-10"
 
 keywords: API key, user API keys, IBM Cloud API keys, manage user keys, create API key
 
@@ -26,9 +26,15 @@ subcollection: iam
 A federated user or non-federated user can create an API key to use in the CLI or as part of automation to log in as your user identity. You can use the console, CLI, or API to manage your {{site.data.keyword.cloud}} API keys by listing your keys, creating keys, updating keys, or deleting keys. 
 {: shortdesc}
 
+The API key inherits all assigned access for the user identity for which it is created, and the access is not limited to just the account where the API key is created because it inherits any policies that are assigned to the user. So, if the user has access to resources from multiple accounts, then the API key inherits the access from all accounts. Therefore, it is possible that a user's API key can be used to generate a token and access resources that a user has access to outside of the account where the API key was created. 
 
-As a [federated user](/docs/account?topic=account-signup#signup), you can use an API key to log in by using the `IBMCLOUD_API_KEY` environment variable. For more information about using an API key for logging in, see [Logging in with a federated ID](/docs/iam?topic=iam-federated_id#federated_id).
-{: note}
+Because the API key that is associated with your user identity has all of the access you're entitled to across any account that you are a member of, you must be cautious with how you use your API key. For example, an {{site.data.keyword.cloud_notm}} service might need to act on behalf of a user or access services that are not IAM-enabled, so the service might request a user API key. In these cases, it is recommended that you create an API key associated with a functional ID that is assigned the minimum level of access that is required to work with the service. 
+
+A functional ID is a user ID created to represent a program, application, or service. The functional ID can be invited to an account and assigned only the access for a particular purpose, such as interacting with a specific resource or application. The functional ID should be granted only the minimum level access in a single account that is needed for the specific function for which it was created.
+
+
+## Managing user API keys
+{: #manage-user-keys}
 
 To manage the {{site.data.keyword.Bluemix_notm}} API keys that are associated with your user identity or the ones that you have access to manage for other users in the account, go to **Manage** &gt; **Access (IAM)** &gt; **API keys**. On the API keys page, you can create, edit, or delete {{site.data.keyword.cloud_notm}} API keys for yourself, and you can manage all [classic infrastructure API keys](/docs/iam?topic=iam-classic_keys) for users that you are an ancestor of in the user hierarchy. In addition, if you are the account owner or a user assigned the required access to manage other user's API keys in the account, you can use the **View** filter to list and manage those API keys too.
 
@@ -43,7 +49,7 @@ To manage the {{site.data.keyword.Bluemix_notm}} API keys that are associated wi
 {: help}
 {: support}
 
-As an {{site.data.keyword.Bluemix_notm}} user you might want to use an API key when you enable a program or script without distributing your password to the script. A benefit of using an API key can be that a user or organization can create several API Keys for different programs and the API keys can be deleted independently if compromised without interfering with other API keys or even the user. You can create up to 20 API keys.
+As an {{site.data.keyword.Bluemix_notm}} user you might want to use an API key when you enable a program or script without distributing your password to the script. A benefit of using an API key can be that a user or organization can create several API keys for different programs and the API keys can be deleted independently if compromised without interfering with other API keys or even the user. You can create up to 20 API keys.
 
 To create an API key for your user identity in the UI, complete the following steps:
 
