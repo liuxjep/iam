@@ -4,9 +4,9 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-03-09"
+lastupdated: "2020-04-13"
 
-keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service, role management service
+keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service, role management service, catalog management service
 
 subcollection: iam
 
@@ -62,14 +62,15 @@ If you're using the [Policy management API](https://cloud.ibm.com/apidocs/iam-po
 | Account management service         | Attribute and value   |
 |---------------|---------------------------------|
 | Access groups | serviceName=iam-groups |
-| User management | serviceName=user-management |
-| Support center| serviceName=support |
 | Billing | serviceName=billing |
-| IAM Identity service | serviceName=iam-identity |
-| Global catalog | serviceName=globalcatalog |
+| Catalog management | serviceName=globalcatalog-collection |
 | Enterprise | serviceName=enterprise |
+| Global catalog | serviceName=globalcatalog |
+| IAM Identity service | serviceName=iam-identity |
 | License and entitlement | serviceName=entitlement | 
 | Role management | serviceName=iam-access-management |
+| Support center| serviceName=support |
+| User management | serviceName=user-management |
 | All account management services | serviceType=platform_service (don't include a serviceName attribute)  | 
 {: caption="Table 1. Account management service names for API calls" caption-side="top"}
 
@@ -132,38 +133,6 @@ You can give users access to view, create, edit, and delete access groups in the
 | Administrator | View, create, edit, and delete groups <br><br> Add or remove users <br><br> Assign access to a group <br><br> Manage access for working with access groups <br><br> Enable or disable public access to resources at the account level |
 {: caption="Table 2. Roles and example actions for the Access groups service" caption-side="top"}
 
-### User management
-{: #user-management-account-management}
-
-You can give users access to view users in an account, invite and remove users, and view and update user profile settings with the user management account management service. 
-
-| Roles         | Actions                                                                                                |
-|---------------|--------------------------------------------------------------------------------------------------------|
-| Viewer        | View users in the account <br><br> View user profile settings                                          |
-| Operator      | View users in the account <br><br> View user profile settings                                          |
-| Editor        | View, invite, remove, and update users from the account <br><br> View and update user profile settings |
-| Administrator | View, invite, remove, and update users from the account <br><br> View and update user profile settings |
-{: caption="Table 3. Roles and example actions for the User Management service" caption-side="top"}
-
-The viewer role on the user management service is a role that is commonly assigned for users assigned a role to view or manage support cases. If an account owner restricts the visibility of the user list in the IAM settings, users can't see support cases that are opened by other users in the account. However, if they are assigned the viewer role for the user management service, the user list visibility setting doesn't affect the ability to view cases in the account.
-{: tip}
-
-### Support center
-{: #support-center-account-management}
-
-You can give users access to manage support cases by using the support center service.
-
-| Roles         | Actions                                                                       |
-|---------------|-------------------------------------------------------------------------------|
-| Viewer        |  View cases <br><br> Search cases                                             |
-| Operator      |  Not applicable                                                               |
-| Editor        |  View cases <br><br> Search cases <br><br> Update cases <br><br> Create cases |
-| Administrator |  View cases <br><br> Search cases <br><br> Update cases <br><br> Create cases |
-{: caption="Table 4. Roles and example actions for the Support Center service" caption-side="top"}
-
-Assign users the viewer role on the user management service in addition to a support center access policy so the user can see all cases in the account regardless of user list visibility settings. If the user list visibility is set to restricted, this can limit a user's ability to view, search, and manage support cases in an account that they didn't open themselves.
-{: tip}
-
 ### Billing
 {: #billing-acct-mgmt}
 
@@ -175,52 +144,24 @@ You can give users access to update account settings, view subscriptions, view o
 | Operator      | View account feature settings <br><br> View subscriptions in account <br><br> View and change account name |
 | Editor        | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications |
 | Administrator | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications <br><br> View subscription balances and track usage <br><br> Create an enterprise |
-{: caption="Table 5. Roles and example actions for the Billing service" caption-side="top"}
+{: caption="Table 3. Roles and example actions for the Billing service" caption-side="top"}
 
 It's possible to view subscription balances and usage from the Account settings page, but you can't view the Account settings page with the Viewer or Operator roles. To access the Account settings page and your subscription information from that page, you need the Editor role or higher. 
 {: note}
 
-### IAM identity service
-{: #identity-service-account-management}
+### Catalog management
+{: #catalog-management-account-management}
 
-You can give users access to manage service IDs by using the IAM identity service. For the IAM identity service, these actions apply to service IDs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies. This account management service applies to the ability to view, update, delete, and assign access to service IDs in the account created by other users.
-
-| Roles         | Actions                                                                                           |
-|---------------|----------------------------------------------------------------------------------------------------|
-| Viewer        | View IDs              |
-| Operator      | Create and delete IDs and API keys <br>        |
-| Editor        | Create, update, and delete IDs and API keys       |
-| Administrator | Create, update, and delete IDs and API keys <br><br> Assign access policies to IDs  |
-{: caption="Table 6. Roles and example actions for the IAM Identity service" caption-side="top"}
-{: #identity-service-acct-mgmt}
-
-### Role management
-{: #custom-roles-account-management}
-
-You can give users access to create, update, and delete custom roles for services in the account. 
-
-| Roles         | Actions                                                                                                                                                    |
-|---------------|------------------------------------|
-| Viewer        | Not applicable         |
-| Operator      | Not applicable             |
-| Editor        | Edit and update custom roles in an account          |
-| Administrator | Create, edit, update, and delete custom roles in an account  |
-{: caption="Table 7. Roles and example actions for the Role management service" caption-side="top"}
-
-
-### Global catalog
-{: #global-catalog-account-management}
-
-You can give users access to view private services in the catalog or change the visibility for others users for private services by using the global catalog service.
+You can give users access to view private catalogs and catalog filters, create private catalogs, add software to private catalogs, and set catalog filters. 
 
 | Roles         | Actions                                                                                                |
 |---------------|--------------------------------------------------------------------------------------------------------|
-| Viewer        | View private services                                                                                  |
-| Operator      | Not applicable                                                                                         |
-| Editor        | Change object metadata but can't change visibility for private services                                |
-| Administrator | Change object metadata or visibility for private services, and restrict visibility of a public service |
-{: caption="Table 8. Roles and example actions for the Global Catalog service" caption-side="top"}
-
+| Viewer        | View account-level filters set for the {{site.data.keyword.cloud_notm}} catalog <br><br> View private catalogs                                          |
+| Operator      | Create private catalogs <br><br> Set filters for private catalogs <br><br> Add and update software <br><br> View account-level filters    |
+| Editor        | Create private catalogs <br><br> Set filters for private catalogs <br><br> Add and update software <br><br> View account-level filters |
+| Administrator | Set account-level filters for the {{site.data.keyword.cloud_notm}} catalog <br><br> Create, update, and delete private catalogs <br><br> Publish {{site.data.keyword.IBM_notm}}-approved products <br><br> Assign access policies |
+| Publisher     | Publish products that are approved by {{site.data.keyword.IBM_notm}} from a private catalog |
+{: caption="Table 4. Roles and example actions for the catalog management service" caption-side="top"}
 
 ### Enterprise
 {: #enterprise-account-management}
@@ -234,8 +175,34 @@ You can use the enterprise service to assign users access to manage an enterpris
 | Editor              | View and update the enterprise name and domain, create accounts and account groups, view usage reports, and import accounts. |
 | Administrator       | View and update the enterprise name and domain, create accounts and account groups, move accounts between account groups, import existing accounts, and view usage reports |
 | Usage report viewer | View the enterprise, accounts, and account groups and view usage reports for all accounts in the enterprise.                               |
-{: caption="Table 9. Roles and example actions for the Enterprise service" caption-side="top"}
+{: caption="Table 5. Roles and example actions for the Enterprise service" caption-side="top"}
 
+### Global catalog
+{: #global-catalog-account-management}
+
+You can give users access to view private services in the catalog or change the visibility for others users for private services by using the global catalog service.
+
+| Roles         | Actions                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------|
+| Viewer        | View private services                                                                                  |
+| Operator      | Not applicable                                                                                         |
+| Editor        | Change object metadata but can't change visibility for private services                                |
+| Administrator | Change object metadata or visibility for private services, and restrict visibility of a public service |
+{: caption="Table 6. Roles and example actions for the Global Catalog service" caption-side="top"}
+
+### IAM identity service
+{: #identity-service-account-management}
+
+You can give users access to manage service IDs by using the IAM identity service. For the IAM identity service, these actions apply to service IDs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies. This account management service applies to the ability to view, update, delete, and assign access to service IDs in the account created by other users.
+
+| Roles         | Actions                                                                                           |
+|---------------|----------------------------------------------------------------------------------------------------|
+| Viewer        | View IDs              |
+| Operator      | Create and delete IDs and API keys <br>        |
+| Editor        | Create, update, and delete IDs and API keys       |
+| Administrator | Create, update, and delete IDs and API keys <br><br> Assign access policies to IDs  |
+{: caption="Table 7. Roles and example actions for the IAM Identity service" caption-side="top"}
+{: #identity-service-acct-mgmt}
 
 ### License and entitlement 
 {: #license-entitlement-management}
@@ -248,7 +215,52 @@ You can use the license and entitlement service to assign users access to manage
 | Operator      |  Not applicable                                                                                            |
 | Editor        |  Editors can create entitlements and view, update, bind, or delete only the entitlements they acquired.    |
 | Administrator |  Administrators can create entitlements and view, update, bind, or delete any entitlements in the account. |
-{: caption="Table 10. Roles and example actions for the license and entitlement service" caption-side="top"}
+{: caption="Table 8. Roles and example actions for the license and entitlement service" caption-side="top"}
+
+### Role management
+{: #custom-roles-account-management}
+
+You can give users access to create, update, and delete custom roles for services in the account. 
+
+| Roles         | Actions                                                                                                                                                    |
+|---------------|------------------------------------|
+| Viewer        | Not applicable         |
+| Operator      | Not applicable             |
+| Editor        | Edit and update custom roles in an account          |
+| Administrator | Create, edit, update, and delete custom roles in an account  |
+{: caption="Table 9. Roles and example actions for the Role management service" caption-side="top"}
+
+### Support center
+{: #support-center-account-management}
+
+You can give users access to manage support cases by using the support center service.
+
+| Roles         | Actions                                                                       |
+|---------------|-------------------------------------------------------------------------------|
+| Viewer        |  View cases <br><br> Search cases                                             |
+| Operator      |  Not applicable                                                               |
+| Editor        |  View cases <br><br> Search cases <br><br> Update cases <br><br> Create cases |
+| Administrator |  View cases <br><br> Search cases <br><br> Update cases <br><br> Create cases |
+{: caption="Table 10. Roles and example actions for the Support Center service" caption-side="top"}
+
+Assign users the viewer role on the user management service in addition to a support center access policy so the user can see all cases in the account regardless of user list visibility settings. If the user list visibility is set to restricted, this can limit a user's ability to view, search, and manage support cases in an account that they didn't open themselves.
+{: tip}
+
+### User management
+{: #user-management-account-management}
+
+You can give users access to view users in an account, invite and remove users, and view and update user profile settings with the user management account management service. 
+
+| Roles         | Actions                                                                                                |
+|---------------|--------------------------------------------------------------------------------------------------------|
+| Viewer        | View users in the account <br><br> View user profile settings                                          |
+| Operator      | View users in the account <br><br> View user profile settings                                          |
+| Editor        | View, invite, remove, and update users from the account <br><br> View and update user profile settings |
+| Administrator | View, invite, remove, and update users from the account <br><br> View and update user profile settings |
+{: caption="Table 11. Roles and example actions for the User Management service" caption-side="top"}
+
+The viewer role on the user management service is a role that is commonly assigned for users assigned a role to view or manage support cases. If an account owner restricts the visibility of the user list in the IAM settings, users can't see support cases that are opened by other users in the account. However, if they are assigned the viewer role for the user management service, the user list visibility setting doesn't affect the ability to view cases in the account.
+{: tip}
 
 ### All account management services option
 {: #all-account-management}
@@ -262,4 +274,4 @@ To quickly give users a wide-ranging set of account management access, you can a
 | Operator      | All operator role actions for the account management services                                                |
 | Editor        | All editor role actions for the account management services and the ability to create resource groups        |
 | Administrator | All administrator role actions for the account management services and the ability to create resource groups |
-{: caption="Table 11. Roles and example actions for a policy on all identity and access services" caption-side="top"}
+{: caption="Table 12. Roles and example actions for a policy on all identity and access services" caption-side="top"}
