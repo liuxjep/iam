@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-01-28"
+lastupdated: "2020-04-15"
 
 keywords: specific IP addresses, IP addresses, restrict IP access, IP address access, allow IP access
 
@@ -25,9 +25,6 @@ subcollection: iam
 
 By default, all IP addresses can be used to log in to the {{site.data.keyword.cloud}} console and access classic infrastructure APIs. You can specify which IP addresses have access, and only the specified addresses are allowed can be used and all others are restricted.
 {:shortdesc}
-
-You cannot access classic infrastructure pages on [https://cloud.ibm.com](https://cloud.ibm.com){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") if you have restricted IP addresses. You must go to [https://control.softlayer.com](https://control.softlayer.com){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
-{: important}
 
 If you have the following assigned access, you can update the restricted IP addresses for another user:
 
