@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-12-13"
+lastupdated: "2020-04-16"
 
 keywords: access, users, service IDs, access group, IAM, policy, characters, wildcard, operators, asterisk, question mark, *, ?, JSON document, policy document
 
@@ -33,6 +33,9 @@ When you use the `stringEquals` operator, an exact string match is performed bet
   * `*dev` matches any string that ends with `dev`
 
 To assign access, you need the administrator role on the resource. For more information, see [IAM access](/docs/iam?topic=iam-userroles).
+
+Refer to the documentation for the specific service that you are assigning access for to get details about the supported operators for specific attributes for that service.
+{: note}
 
 ## JSON policy document
 {: #policy-js}
@@ -139,6 +142,5 @@ The following example shows how you can create a policy that gives a user access
 }
 ```
 {: codeblock}
-
 
 
