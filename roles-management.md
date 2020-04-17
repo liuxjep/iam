@@ -4,7 +4,7 @@ copyright:
 
   years: 2020
 
-lastupdated: "2020-03-23"
+lastupdated: "2020-04-16"
 
 keywords: custom access, custom role, create a role, combine actions
 
@@ -50,7 +50,7 @@ You can create new roles that are scoped to single services. This means that you
 Custom roles can't be created for the all account management services or all IAM-enabled services options. 
 {: note}
 
-1. Go to **Manage** > **Access (IAM)**, and select **Roles**.
+1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
 1. Click **Create**.
 1. Enter a name for your role. This name must be unique within the account. Users see this role name in the console when they assign access to the service.
 1. Enter an ID for the role. This ID is used in the CRN, which is used when assigning access by using the API. The role ID must begin with a capital letter and use alphanumeric characters only.
@@ -68,3 +68,4 @@ If a service removes an action that you use in a custom role, the custom role is
 {: note}
 
 If you plan to delete a custom role because it is no longer needed, you must be assigned the Administrator role on the Role management service. Deleting a custom role automatically updates access for any users, access groups, or service IDs assigned access by using that role to remove it from any existing policies.
+

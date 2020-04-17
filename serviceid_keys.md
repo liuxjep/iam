@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2020
-lastupdated: "2020-03-23"
+lastupdated: "2020-04-16"
 
 keywords: service ID, service ID API key, lock service ID API key, delete service ID API key
 
@@ -22,7 +22,7 @@ subcollection: iam
 # Managing service ID API keys
 {: #serviceidapikeys}
 
-Service IDs are created to enable access to your {{site.data.keyword.Bluemix}} services by applications hosted both inside and outside of {{site.data.keyword.Bluemix_notm}}. API keys are used by an application to authenticate as a particular service ID and are granted the access that is associated with that service ID.
+Service IDs are created to enable access to your {{site.data.keyword.Bluemix}} services by applications hosted both inside and outside of {{site.data.keyword.Bluemix_notm}}. API keys are used by an application to authenticate as a particular service ID and are granted the access that is associated with that specific service ID.
 {:shortdesc}
 
 After you create a service ID, you can start creating API keys and assigning service policies. Each policy specifies the level of access that is allowed when the API key is used to authenticate with your services. For more information about creating a service ID and assigning policies, see [Creating and working with service IDs](/docs/iam?topic=iam-serviceids#serviceids). For more information about the CLI commands that are used to manage service ID API keys, see [Managing IAM access, API keys, service IDs, and access groups](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam).
@@ -44,7 +44,7 @@ If you are a user with the required access, you can view, update, and delete API
 
 Create an API key to associate with a service ID in the console:
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the {{site.data.keyword.Bluemix_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. If you don't have a service ID created, create the service ID.
 3. From the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, click **Manage service ID**.
 4. Click **API keys**.
@@ -62,7 +62,7 @@ For security reasons, the API key is only available to be copied or downloaded a
 
 You can update an API key by editing the name or description that is used to identify the key in the UI.
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the console, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. From the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, click **Manage service ID**.
 3. Click **API keys**.
 4. From the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, click **Edit name & description**.
@@ -82,7 +82,7 @@ ibmcloud iam service-api-key-update NAME SERVICE_ID [-n, --name NEW_sNAME] [-d, 
 
 For API keys that represent the identity of the service ID, you can prevent the API key from being deleted by locking it. A locked API key is indicated by the ![Locked icon](images/locked.svg "Locked") icon in the UI.
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. Identify the row of the service ID that you want to select an API key for, and select the name of the service ID.
 3. Click **API keys**.
 4. Hover on the row of the API key that you want to lock, and click the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu to open a list of options.
@@ -136,7 +136,7 @@ ibmcloud iam service-api-key-unlock (APIKEY_NAME|APIKEY_UUID) (SERVICE_ID_NAME|S
 
 You can delete an API key that is associated with a service ID. However, deleting an API key that is used by an application removes the ability for that application to authenticate with your services.
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the console, go to **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. If you don't have a service ID created, create the service ID.
 3. From the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, click **Manage service ID**.
 4. Click **API keys**.

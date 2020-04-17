@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2019
+  years: 2019, 2020
 
-lastupdated: "2019-07-02"
+lastupdated: "2020-04-16"
 
 keywords: federated ID, enterprise SSO, SAML federation
 
@@ -30,15 +30,16 @@ This type of federation is deprecated. If you delete this configuration, it is p
 
 To edit your SAML configuration data, complete the following steps:
 
-1. Go to **Manage** > **Access (IAM)**, and then select **Identity providers**. 
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)**, and then select **Identity providers**. 
 2. Click **Edit**.
 3. Change the information in the fields that you need to edit.
 4. Click **Save**.
 
 To delete your deprecated SAML federation configuration, complete the following steps:
 
-1. Go to **Manage** > **Access (IAM)**, and then select **Identity providers**. 
+1. In the console, go to **Manage** > **Access (IAM)**, and then select **Identity providers**. 
 2. Click **Delete**.
 3. Select the option to confirm that you understand deleting the configuration is permanent. Since this type of federation is deprecated, it can't be set up again.
 4. Click **Delete**.
+
 

@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-01-30"
+lastupdated: "2020-04-16"
 
 keywords: user list visibility, users page setting, user view access, limit access to users list, user list access
 
@@ -31,5 +31,5 @@ When the **Unrestricted view** option is selected, any user in the account can v
 
 By default, the unrestricted view is set for your account. To update this setting, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Settings**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Settings**.
 2. Select **Restricted view** for the **User list visibility** setting.

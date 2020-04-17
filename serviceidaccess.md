@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2020
-lastupdated: "2020-02-11"
+lastupdated: "2020-04-16"
 
 keywords: service ID, service ID access, managing access for service IDs
 
@@ -32,7 +32,7 @@ If you delete or edit an existing policy for a service ID currently being used, 
 
 To assign access to all resources in a resource group or to just one service within a resource group, complete the following steps:
 
-1. From the menu bar, click **Manage** > **Access (IAM)**, and select **Service IDs**.
+1. In the {{site.data.keyword.cloud}} console, click **Manage** > **Access (IAM)**, and select **Service IDs**.
 2. From the row for the service ID that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu > **Assign access**.
 3. Add the service ID to an access group. Click **Add** for the access group that you want the service ID to belong to.
 4. (Optional) Manually assign access.
@@ -43,7 +43,7 @@ To assign access to all resources in a resource group or to just one service wit
 
 To assign access to an individual account management services or all account management services, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and then select **Service IDs**.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and then select **Service IDs**.
 2. From the row for the service ID that you want to assign a service policy for, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
 3. Add the service ID to an access group. Click **Add** for the access group that you want the service ID to belong to.
 4. (Optional) Manually assign access.
@@ -59,7 +59,7 @@ You might receive a message that a policy exists for the details that were selec
 
 To edit an existing policy:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. Select the service ID from the table that you want to edit a service policy for.
 3. Click **Access policies**.
 4. Identify the row of the policy that you want to edit, and select **Edit policy** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
@@ -80,7 +80,7 @@ When you edit access for a service ID, you might receive a message about not all
 
 To remove an existing policy:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and select **Service IDs**.
 2. Select the service ID from the table that you want to delete a service policy for.
 3. Click **Access policies**.
 4. Identify the row of the policy that you want to delete, and select **Remove** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.

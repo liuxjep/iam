@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-02-11"
+lastupdated: "2020-04-16"
 
 keywords: public access, anonymous access, users, service IDs, public access group, enable, disable, manage, IAM
 
@@ -18,6 +18,7 @@ subcollection: iam
 {:new_window: target="_blank"}
 {:tip: .tip}
 {:note: .note}
+{:pre: .pre}
 
 # Managing public access to resources
 {: #public}
@@ -37,7 +38,7 @@ As an example, the following section describes how to assign public access to an
 ### Assigning access in the console
 {: #public-access-console}
 
-1. From the console menu bar, click **Manage** > **Access (IAM)**, and select **Access groups**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Access groups**.
 2. Click the name of the public access group > **Assign access**.  
 3. Select **{{site.data.keyword.cos_short}}** from the **Services** list.
 4. Select the specific instance from the **Service instance** list.
@@ -51,9 +52,10 @@ As an example, the following section describes how to assign public access to an
 
 To assign access for the Public Access group, run the **`ibmcloud iam access-group-policy-create`** command. In the command example, the policy details are specified in a JSON file. See [Assigning access by using the API](#public-access-api) for an example of what to include in the JSON file.
 
+```sh
+ibmcloud iam access-group-policy Public Access -f @policy.json
 ```
-$ ibmcloud iam access-group-policy Public Access -f @policy.json
-```
+{: pre}
 
 For more information about the command options, see [`ibmcloud iam access-group-policy-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create).
 
@@ -62,7 +64,7 @@ For more information about the command options, see [`ibmcloud iam access-group-
  
 The following request example creates a policy for the Public Access group. 
 
-```
+```curl
 curl -X POST \
 'https://iam.cloud.ibm.com/v1/policies' \
 -H 'Authorization: $TOKEN' \
@@ -112,7 +114,7 @@ When you disable public access, all existing policies for the Public Access grou
 ### Disabling access in the console
 {: #disable-public-ui}
 
-To disable public access for the account, go to **Manage** > **Access (IAM)** > **Settings**, and set the Public access setting to **Disable public access**.
+To disable public access for the account, go to **Manage** > **Access (IAM)** > **Settings** in the console, and set the Public access setting to **Disable public access**.
 
 ### Disabling access by using the API
 {: #disable-public-api}

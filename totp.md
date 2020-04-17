@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-05-01"
+lastupdated: "2020-04-16"
 
 keywords: MFA, multifactor authentication, time-based one-time passcode, TOTP
 
@@ -35,7 +35,7 @@ To turn on the login setting for a user to be prompted for TOTP MFA, complete th
 To turn on this MFA option for a user, he or she must first [set up TOTP](/docs/account?topic=account-login-settings#MFA) from the profile Login settings page.
 {: note}
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list.
 3. From the **User details** page in the **Manage user's login** section, set the **Time-based one-time passcode MFA** option to on.
 

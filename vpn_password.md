@@ -2,14 +2,13 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-01-28"
+lastupdated: "2020-04-16"
 
 keywords: VPN password, update VPN password, classic infrastructure VPN
 
 subcollection: iam
-
 
 ---
 
@@ -22,7 +21,7 @@ subcollection: iam
 # Updating the classic infrastructure VPN password
 {: #vpnpassword}
 
-You can update your own VPN password, or in the case where a user forgets their password, another user with correct access can update that user's VPN password.
+You can update your own VPN password, or in the case where a user forgets their password and can't reset it themselves, another user with correct access can update that user's VPN password.
 {:shortdesc}
 
 If you have the following access, you can update the VPN password for another user:
@@ -32,7 +31,7 @@ If you have the following access, you can update the VPN password for another us
 
 To update the VPN password, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list.
 3. From the User details page, go to the **VPN password** section.
 4. Click the **Edit** icon ![Edit icon](../icons/icon_write.svg) to enter a new VPN password.

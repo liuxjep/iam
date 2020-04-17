@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-04-16"
 
 ---
 
@@ -38,7 +38,7 @@ When the user selects the service name, the following error message is displayed
 In addition to access to the type of service or specific resource, the user must also be assigned access to the resource group or space that contains the resource. To access the resource instance within a specific account, a user must be assigned at least the Viewer role or higher on the resource group itself. 
 {: tsCauses}
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select the user's name from **Users** page. 
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select the user's name from **Users** page. 
 1. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
 1. Select **Assign users additional access**.
 1. Select the **IAM services** tile. 
@@ -65,7 +65,7 @@ You might not be assigned the correct access.
 
 To check what you have access to and the level of access, complete the following steps. If you need to request access, contact the account owner.
 
-Go to **Manage** &gt; **Access (IAM)**, and select your name on the **Users** page. Then, depending on the access you're looking for, select the different tabs:
+Go to **Manage** &gt; **Access (IAM)** in the console, and select your name on the **Users** page. Then, depending on the access you're looking for, select the different tabs:
 {: tsResolve}
 
 * To determine what access you have through the access groups you are assigned, select **Access groups**.
@@ -116,7 +116,7 @@ Users don't seem to have the same managing billing and support case permissions 
 Your migrated permissions access groups might not be assigned the correct access policies when the users were initially migrated.
 {: tsCauses}
 
-As of 20 May 2019, all [migrated permission access groups](/docs/iam?topic=iam-migrated_permissions) have the correct policies that are assigned for managing billing information and support cases. If you tried to use these groups before this date, the access groups that are missing equivalent IAM access policies might have caused a mismatch in the assigned access between the SoftLayer permissions and IAM access. This is resolved. You can go to **Manage** > **Access (IAM)**, and then select **Access groups** to review the users and policies that are assigned to each access group.
+As of 20 May 2019, all [migrated permission access groups](/docs/iam?topic=iam-migrated_permissions) have the correct policies that are assigned for managing billing information and support cases. If you tried to use these groups before this date, the access groups that are missing equivalent IAM access policies might have caused a mismatch in the assigned access between the SoftLayer permissions and IAM access. This is resolved. You can go to **Manage** > **Access (IAM)** in the console, and then select **Access groups** to review the users and policies that are assigned to each access group.
 {: tsResolve}
 
 ## I can't assign access in my account because I reached the maximum number of allowed policies

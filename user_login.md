@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-01-28"
+lastupdated: "2020-04-16"
 
 keywords: login settings, manage user login settings, change login settings for user
 
@@ -27,7 +27,7 @@ An account owner, or a user that has the correct access, can manage a user's log
 
 Complete the following steps to manage the login settings for a specific user:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list, and click **User details**.
 3. From the **Manage user's login** section, you can turn the following options on or off for the selected user:
 

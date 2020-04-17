@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-05-01"
+lastupdated: "2020-04-16"
 
 keywords: security questions, MFA, multifactor authentication, login security
 
@@ -34,7 +34,7 @@ If you have any of the following types of access, you can update this setting fo
 To turn on this MFA option for a user, the user must set up [security questions](/docs/account?topic=account-login-settings#security-questions) and answers from the profile Login settings page.
 {: note}
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud)) console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list.
 3. From the **User details** page in the **Manage user's login** section, set the **Require MFA security questions at login** option to on.
 

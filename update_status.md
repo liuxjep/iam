@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-04-16"
 
 keywords: user state, user status, change user status, update user status
 
@@ -55,7 +55,7 @@ When you update a user from VPN-only status to Active status, the user must know
 
 To change a user's status, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list.
 3. From the User details page, select an option from the **User status** menu.  
 4. Click **Apply**.
