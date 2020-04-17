@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-09-12"
+lastupdated: "2020-04-16"
 
 keywords: dynamic rules,access groups,specific identity attributes,identity provider,federated ID,
 
@@ -25,7 +25,7 @@ subcollection: iam
 You can create dynamic rules to automatically add federated users to access groups based on specific identity attributes. When your users log in with a federated ID, the data from the identity provider dynamically maps your users to an access group based on the rules that you set.
 {:shortdesc}
 
-Users already have specific identity information within your company's domain, and when they log in with a federated ID, this data can be passed through by using SAML assertions. The SAML assertions or attribute statements that are configured within the identity provider provide the data that is used to create each rule. For example, you might have a true or false attribute statement that defines users as a manager. This information can be used to add all users who are managers to a specific access group for managers that you created in your {{site.data.keyword.Bluemix_notm}} account. For more information, see the tutorial about how to [Control access to cloud resources](https://developer.ibm.com/tutorials/use-iam-access-groups-to-effectively-manage-access-to-your-cloud-resources/){: external} and an [Example rule](/docs/iam?topic=iam-rules#example).
+Users already have specific identity information within your company's domain, and when they log in with a federated ID, this data can be passed through by using SAML assertions. The SAML assertions or attribute statements that are configured within the identity provider provide the data that is used to create each rule. For example, you might have a true or false attribute statement that defines users as a manager. This information can be used to add all users who are managers to a specific access group for managers that you created in your {{site.data.keyword.Bluemix}} account. For more information, see the tutorial about how to [Control access to cloud resources](https://developer.ibm.com/tutorials/use-iam-access-groups-to-effectively-manage-access-to-your-cloud-resources/){: external} and an [Example rule](/docs/iam?topic=iam-rules#example).
 
 Only users who are already invited to the account can be mapped to access groups by using dynamic rules.
 {: note}
@@ -37,13 +37,13 @@ Dynamic rules are created by setting conditions that must be matched by the data
 
 To create a rule, follow these steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
 2. Select the name of the access group that you want to create a rule for to open the group details page.
 3. Select the **Dynamic rules** tab.
 4. Click **Add rule**.
 5. Enter the information from your identity provider that is dynamically provided for you on the Add rule page. The following list provides details for each required field.
 
-You can think of the rule as a key:value pair where the key is what you add in the `Add users when` field, and the value is what you enter in the `Value` field for what the rule must compare against based on the comparator that is selected.
+You can think of an access group rule as a key:value pair. The key is what you add in the `Add users when` field, and the value is what you enter in the `Values` field. 
 {: tip}
 
 <dl>
@@ -69,12 +69,12 @@ Users added to access groups by using dynamic rules don't display as group membe
 
 The following example includes values for each of the fields on the **Add rule** page. In this rule, users who are identified as managers within the federated identity provider are mapped to an {{site.data.keyword.Bluemix_notm}} access group that has specific access set for only managers.
 
-| Field | Value |
-|----------|---------|
-| Name | Manager group rule |
-| Identity provider | `https://idp.example.org/SAML2` |
-| Expiration (in hours) | 12 |
-| Add users when (attribute name) | isManager |
-| Comparator | Equals  |
-| Value |  true |
+| Field                           | Value                           |
+|---------------------------------|---------------------------------|
+| Name                            | Manager group rule              |
+| Identity provider               | `https://idp.example.org/SAML2` |
+| Expiration (in hours)           | 12                              |
+| Add users when (attribute name) | isManager                       |
+| Comparator                      | Equals                          |
+| Value                           | true                            |
 {: caption="Table 1. Example dynamic rule for access groups" caption-side="top"}
