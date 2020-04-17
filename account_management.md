@@ -33,7 +33,7 @@ As the account owner or the administrator of an account management service, you 
 
 To assign access to one or all account management services, complete the following steps:
 
-1. From the menu bar, click **Manage** > **Access (IAM)**, and then select **Users**.
+1. From the {{site.data.keyword.cloud}} console, click **Manage** > **Access (IAM)**, and then select **Users**.
 2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
 3. Select **Assign users additional access**, and select **Account Management**.
 4. For the access, select **All Account Management Services** or select a specific account management service.
