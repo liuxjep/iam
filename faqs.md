@@ -6,7 +6,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-03-16"
+lastupdated: "2020-04-16"
 
 keywords: frequently asked question, faq
 
@@ -67,7 +67,7 @@ The access management systems are entirely different. IAM resources belong to a 
 {: faq}
 {: support}
 
-Go to **Manage** &gt; **Access (IAM)**, and select your name on the Users page. Then, depending on the access you're looking for, open the different tabs:
+In the {{site.data.keyword.cloud_notm}} console, go to **Manage** &gt; **Access (IAM)**, and select your name on the Users page. Then, depending on the access you're looking for, open the different tabs:
 
 * To determine what access you have through the access groups you are assigned, select **Access groups**.
 * To see IAM access policies that are assigned to you, select the **Access policies**.
@@ -89,7 +89,7 @@ The account owner can update your access to any resource in the account, or you 
 {: #iam-id}
 {: faq}
 
-Go to **Manage** > **Access (IAM)**, and select **Users**. Then, select your name or another user's name from the list. You can find the IAM ID for that user along with their email address on the User details page.
+In the console, go to **Manage** > **Access (IAM)**, and select **Users**. Then, select your name or another user's name from the list. You can find the IAM ID for that user along with their email address on the User details page.
 
 ## Why use resource groups and access groups?
 {: #resource-groups}
@@ -157,7 +157,7 @@ The account owner can remove any users from the account, and any user with the f
 {: faq}
 {: support}
 
-1. Go to **Manage** &gt; **Access (IAM)**, and select **Settings**.
+1. In the console, go to **Manage** &gt; **Access (IAM)**, and select **Settings**.
 2. From the Account login section, select **Update** to select MFA for all users or non-federated users only.
 
 For more information, see [Requiring MFA for users in your account](/docs/iam?topic=iam-enablemfa#enablemfa).
@@ -185,7 +185,7 @@ Access control and account resource organization are the major differences betwe
 {: faq}
 {: support}
 
-To assign a user in your account full administrator access, go to **Manage > Access (IAM)**, select the user's name, and assign the following access:
+To assign a user in your account full administrator access, go to **Manage > Access (IAM)** in the console, select the user's name, and assign the following access:
 
 * An IAM policy with Administrator and Manager roles on All Identity and Access enabled services, which enables a user to create service instances and assign users access to all resources in the account.
 * An IAM policy with Administrator role on All account management services, which enables a user to complete tasks like inviting and removing users, managing access groups, managing service IDs, managing private catalog offerings, and track billing and usage.

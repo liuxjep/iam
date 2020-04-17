@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2020
-lastupdated: "2020-02-05"
+lastupdated: "2020-04-16"
 
 keywords: access groups, access group, create group, assign access to group
 
@@ -41,7 +41,7 @@ To make assigning and managing access even easier, you can set up resource group
 
 To create an access group, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
 2. Click **Create**.
 3. Enter a name and optional description for your group, and click **Create**.
 
@@ -69,7 +69,7 @@ ibmcloud iam access-group-create GROUP_NAME [-d, --description DESCRIPTION]
 
 After you set up your group with users and service IDs, you can assign a common access policy to the group. Remember, any policy that you set for the group applies to all entities within the group.
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and select **Access Groups**.
 2. From the row for the group that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**. 
 3. Add one or more of the access options that you manage. You must assign at least one access option. For any access options that you don't add and configure, the default value of **No access** is assigned. Depending on the options that you are authorized to manage, you can assign the following types of access:
 

@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-01-14"
+lastupdated: "2020-04-16"
 
 keywords: MFA, multifactor authentication, external authentication, order authentication, Symantec, phone-based authentication, cancel authentication order
 
@@ -31,7 +31,7 @@ You can order external authentication for a user if you are the master user or i
 
 To order external authentication, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list.
 3. From the **User details** page, select **Order external authentication** in the Manage user's login section.
 4. Select **Symantec identity protection** or **Phone-based identity protection**.
@@ -47,7 +47,7 @@ After Symantec authentication is ordered, you can turn on the option for the use
 
 You can disable Symantec or phone-based MFA for a user at any time.
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Select a user from the list.
 3. From the **User details** page, set the **Symantec authentication** or **Phone-based authentication** option to off.
 
@@ -64,7 +64,7 @@ To cancel an order for external authentication, you must be an account owner or 
 
 To cancel the external authentication order, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select Users.
+1. In the console, click **Manage** &gt; **Access (IAM)**, and select Users.
 2. Select a user from the list.
 3. From the **User details** page, click **Delete** ![Delete icon](../icons/icon_trash.svg) for the **Symantec authentication** or **Phone-based authentication**.
 4. Select when to remove it.
