@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2020
 
-lastupdated: "2020-02-05"
+lastupdated: "2020-04-16"
 
 keywords: invite, invite users, invitation access, vpn-only user
 
@@ -48,7 +48,7 @@ Depending on your access level, you can invite new users and assign all or just 
 
 To invite users, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.
+1. In the {{site.data.keyword.cloud_notm}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.
 2. Click **Invite users**.
 3. Specify the email addresses of the users. If you are inviting more than one user with a single invitation, they are all assigned the same access.
 4. Add one or more of the access options that you manage. You must assign at least one access option. For any access options that you don't add and configure, the default value of **No access** is assigned. Depending on the options that you are authorized to manage, you can assign the following types of access:

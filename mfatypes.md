@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018,2019
-lastupdated: "2019-03-05"
+lastupdated: "2019-11-11"
 
 keywords: MFA, multifactor authentication, two-factor authentication
 
@@ -28,9 +28,9 @@ The following two types of MFA options might be enabled for your account:
 
 <dl>
 <dt>ID-based MFA</dt>
-<dd>An option that is enabled by an account owner or an administrator for the billing service in one of the accounts to which you are a member. This type of MFA is associated with your IBMid and authenticates you across all accounts to which you are a member, so you have to authenticate only one time.</dd>
+<dd>An option that is enabled by an account owner or an administrator for the billing service in one of the accounts to which you are a member. This type of MFA is associated with your IBMid and authenticates you across all accounts to which you are a member, so you authenticate only one time.</dd>
 <dt>Account-based options</dt>
-<dd>Options such as security questions, using a time-based one-time passcode, and external authentication options such as Symantec and phone-based authentication. These types of MFA are specific per account, which means that if you have a different type set up for each account that you belong to, you must authenticate in a different way each time you switch accounts. These legacy MFA options are available only with former classic infrastructure accounts.</dd>
+<dd>Options such as security questions that use a time-based one-time passcode and external authentication options such as Symantec and phone-based authentication. These types of MFA are specific per account. If you have a different type set up for each account that you belong to, you must authenticate in a different way each time you switch accounts. These legacy MFA options are available only with former classic infrastructure accounts.</dd>
 </dl>
 
 IBMid MFA satisfies the authentication requirement so that you are not prompted for any other types of MFA even if they are enabled. So, if an account to which you are a member has this option turned on, this is the only type of MFA that you are prompted for at login. If you are a new user, use the ID-based IBMid MFA option to ensure that your login is easy and secure.
@@ -39,7 +39,7 @@ IBMid MFA satisfies the authentication requirement so that you are not prompted 
 ## ID-based MFA option
 {: #id-based}
 
-IBMid MFA for an account requires a time-based one-time passcode in addition to a standard IBMid and password during login. This type of MFA is enabled at the account level by the account owner or an administrator for the billing service. When this feature is enabled, you are required to use the extra security standard at login, and all users that are added to your account are also required. This type of MFA applies to all account resources. You can turn it on or off from the **Manage** > **Access (IAM)** > **Settings** page in the {{site.data.keyword.Bluemix}} console only if you are the account owner or an administrator for the billing service.
+IBMid MFA for an account requires a time-based one-time passcode in addition to a standard IBMid and password during login. This type of MFA is enabled at the account level by the account owner or an administrator for the billing service. When this feature is enabled, you are required to use the extra security standard at login, and all users that are added to your account are also required. This type of MFA applies to all account resources. You can turn it on or off from the console **Manage** > **Access (IAM)** > **Settings** page in the {{site.data.keyword.Bluemix}} console only if you are the account owner or an administrator for the billing service.
 
 One of the benefits of IBMid MFA is that it is free and tied to your ID instead of just the specific account that you are in. If you belong to many accounts, you are required to authenticate only one time when you log in to the console. For more information about IBMid MFA, the considerations that must be reviewed before you require IBMid MFA for your account, and how to set up IBMid MFA for yourself, see [Requiring MFA for users in your account](/docs/iam?topic=iam-enablemfa#enablemfa).
 

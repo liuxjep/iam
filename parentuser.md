@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2018, 2019
+  years: 2018, 2020
 
-lastupdated: "2019-01-28"
+lastupdated: "2020-04-16"
 
 keywords: parent user, change parent user, classic infrastructure hierarchy
 
@@ -34,7 +34,7 @@ If you have the following access, you can update the parent for another user:
 
 To update a user's parent, complete the following steps:
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**, and select **Users**.  
+1. In the {{site.data.keyword.Bluemix}} console, click **Manage** &gt; **Access (IAM)**, and select **Users**.  
 2. Select a user name from the list.
 3. From the User details page, select a new parent user from the **Parent** menu.
 4. Click **Apply**.

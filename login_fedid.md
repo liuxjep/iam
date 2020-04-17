@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2020
 
-lastupdated: "2020-03-16"
+lastupdated: "2020-04-16"
 
 keywords: federated ID, enterprise SSO, single sign-on ID, API key login, one-time passcode login, temporary credential
 
@@ -58,7 +58,7 @@ There are two different methods that you can use for logging in with the CLI. Fo
 
 If you're already logged in to the console, you can use the following steps:
 
-1. Go to your {{site.data.keyword.Bluemix_notm}} console and click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
+1. In the {{site.data.keyword.Bluemix_notm}} console, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
 2. Copy the information for the {{site.data.keyword.Bluemix_notm}} CLI into the CLI. 
 
 ### From the Cloud Foundry CLI
@@ -83,7 +83,7 @@ There are two different methods that you can use for logging the Cloud Foundry C
 
 If you're already logged in to the console, you can use the following steps:
 
-1. Go to your {{site.data.keyword.Bluemix_notm}} console and click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
+1. In the {{site.data.keyword.cloud_notm}} console, click the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) > **Log in to CLI and API**. 
 2. Copy the information for the Cloud Foundry CLI and paste into the CLI. 
 
 ### From the OpenShift CLI

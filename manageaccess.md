@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2017, 2019
+  years: 2017, 2020
 
-lastupdated: "2019-08-19"
+lastupdated: "2020-04-16"
 
 keywords: users level of access, user control, access control, permissions, manage access, access management, platform management tasks, assign roles
 
@@ -27,7 +27,7 @@ The way that you manage access in {{site.data.keyword.Bluemix}} depends on the t
 
 If you have a combination of resource types, you manage each type separately:
 
-* For IAM resources, go to **Manage** &gt; **Access (IAM)**, and then select **Users**, **Access groups**, or **Service IDs** to get started.
+* For IAM resources, go to **Manage** &gt; **Access (IAM)** in the console, and then select **Users**, **Access groups**, or **Service IDs** to get started.
 * For assigning access to your [classic infrastructure resources](/docs/iam?topic=iam-infrapermission), you set permissions within **Manage** > **Access (IAM)** on the Classic infrastructure tab for the user that you want to assign access. 
 * For assigning access to [Cloud Foundry resources](/docs/iam?topic=iam-cfaccess), you assign users to orgs and set Cloud Foundry org and space access roles within **Manage** > **Access (IAM)** on the Cloud Foundry tab for the user.
 
@@ -48,6 +48,6 @@ If you have Cloud Foundry services in your account, you can assign another user 
 ## Getting started
 {: #cloudaccess-getstarted}
 
-Go to **Manage** &gt; **Access (IAM)**, and then select **Users** to start managing access for users in your account. Select a user from the list to get started. You see only the access management options that you have permission to manage. For example, if you are not the account owner and you are not an organization or space manager, you do not see the option to manage Cloud Foundry access.
+Go to **Manage** &gt; **Access (IAM)** in the console, and then select **Users** to start managing access for users in your account. Select a user from the list to get started. You see only the access management options that you have permission to manage. For example, if you are not the account owner and you are not an organization or space manager, you do not see the option to manage Cloud Foundry access.
 
 You can also assign access roles to apps and services by using service IDs. Go to the **Service IDs** page to get started. For more information about how to get up and running quickly with {{site.data.keyword.Bluemix_notm}} IAM, see the [Getting started tutorial](/docs/iam?topic=iam-getstarted).
