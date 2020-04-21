@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-04-21"
 
 keywords: authorizations, service to service access, access between services, dependent service, source service, target service, assigned access, access policies
 
@@ -36,7 +36,7 @@ The source service's dependent services might be in the source service's account
 {: tip}
 
 
-## Creating an authorization
+## Creating an authorization in the console
 {: #create-auth}
 
 You must have access to the target service to create an authorization between services. You can grant only the level of access that you have as a user of the target service. For example, if you have viewer access on the target service, you can assign only the viewer role for the authorization.
@@ -48,6 +48,89 @@ You must have access to the target service to create an authorization between se
 4. Optional: Select **Enable authorization to be delegated** to allow the source service to delegate its access to any dependent services. This option is displayed only if the source service has dependent services. By selecting this option, policies are automatically created by the source service for the dependent services.
 5. Select a role to assign access to the source service that accesses the target service.
 6. Click **Authorize**.
+
+### Creating an authorization by using the CLI
+{: #auth-cli}
+
+To authorize a source service access a target service, run the `ibmcloud iam authorization-policy-create` command. 
+
+The following sample uses mock data to create a policy where a specific source service instance of {{site.data.keyword.cos_full_notm}} is authorized to access a specific target service instance of {{site.data.keyword.keymanagementservicelong_notm}}:
+
+```
+bx iam authorization-policy-create cloud-object-storage kms Reader --source-service-instance-id 123123 --target-service-instance-id 456456
+```
+
+For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
+
+### Creating an authorization by using the API
+{: #auth-api}
+
+To authorize a source service access to a target service, use the [IAM Policy Management API](/apidocs/iam-policy-management#create-a-policy). See the following API example for Create a policy method with the `type=authorization` specified. All of the possible attributes are listed.
+
+The supported attributes for creating an authorization policy depend on what each service supports. For more information about the supported attributes for each service, refer to the documentation for the services that you're using.
+{: note}
+
+```
+curl --request POST \
+  --url https://iam.test.cloud.ibm.com/v1/policies \
+  --header 'Authorization: Bearer <token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "type": "authorization",
+    "subjects": [
+        {
+            "attributes": [
+                {
+                    "name": "accountId",
+                    "value": "<account-id>"
+                },
+                {
+                    "name": "serviceName",
+                    "value": "<service-name>"
+                },
+                {
+                    "name": "serviceInstance",
+                    "value": "<instance-id>"
+                }
+            ]
+        }
+    ],
+    "roles": [
+        {
+            "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Reader"
+        }
+    ],
+    "resources": [
+        {
+            "attributes": [
+                {
+                    "name": "accountId",
+                    "value": "<account-id>"
+                },
+                {
+                    "name": "serviceName",
+                    "value": "<service-name>"
+                },
+                {
+                    "name": "serviceInstance",
+                    "value": "<instance-id>"
+                },
+                {
+                    "name": "resourceType",
+                    "value": "<resource-type>"
+                },
+                {
+                    "name": "resource",
+                    "value": "<id>"
+                }
+            ]
+        }
+    ]
+}'
+```
+
+Not all services support policies at the `resourceType` and individual `resource` level. Examples of services that do support these attributes are {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.keymanagementservicelong_notm}}, where buckets and keys are the resource type and the ID is listed to specify the specific resource.
+{: note}
 
 
 ## Removing an authorization
