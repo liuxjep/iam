@@ -6,7 +6,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-04-21"
 
 keywords: frequently asked question, faq
 
@@ -230,3 +230,9 @@ If you need to assign access to IAM-enabled infrastructure services, such as {{s
 {: support}
 
 All permissions that were previously assigned in your SoftLayer account can be managed in the {{site.data.keyword.Bluemix_notm}} console. Account permissions for managing billing information and support cases are now available in [migrated permissions access groups](/docs/iam?topic=iam-migrated_permissions). All users who were previously assigned these permissions in your SoftLayer account were migrated to these access groups, which are assigned the same level of access by using an IAM policy on the access group.
+
+## How do I determine how many policies exist in my account?
+{: #total-policies}
+{: faq}
+
+You can [check the number of policies in an account](/docs/iam?topic=iam-iam_limits#number-policies) by using the CLI to ensure that you don't hit the limit for your account. 
