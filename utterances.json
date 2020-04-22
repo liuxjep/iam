@@ -19,6 +19,7 @@
     "does the access policy work",
     "what is the access policy",
     "tell me about IAM access policy",
+    "Who can give access IAM authority",
     "explain for the policy for access for IAM"
     ],
   "iam-cloudfoundry":[
@@ -91,6 +92,7 @@
     "require MFA for my account",
     "IBM id multifactor authentication requirement",
     "IBMid MFA requirements",
+    "activate mfa on my ibm id",
     "want MFA for my account",        
     "requiring MFA for these accounts"
     ],
