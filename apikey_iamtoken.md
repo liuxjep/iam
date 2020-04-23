@@ -36,7 +36,7 @@ An access token is a temporary credential that expires after 1 hour. After the a
 
 Use the following `curl` command to generate an IAM token by using an API key.
 
-### POST /identity/token
+### POST https://iam.cloud.ibm.com/identity/token
 {: #post_id_token}
 
 ### Headers
