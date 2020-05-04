@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-04-13"
+lastupdated: "2020-05-04"
 
 keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service, role management service, catalog management service
 
@@ -140,9 +140,9 @@ You can give users access to update account settings, view subscriptions, view o
 
 | Roles         | Actions                                                                                                    |
 |---------------|------------------------------------------------------------------------------------------------------------|
-| Viewer        | View account feature settings <br><br> View subscriptions in account <br><br> View account name            |
+| Viewer        | View account feature settings <br><br> View subscriptions in account <br><br> View account name <br><br> View subscription balances and track usage           |
 | Operator      | View account feature settings <br><br> View subscriptions in account <br><br> View and change account name |
-| Editor        | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications |
+| Editor        | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications <br><br> View subscription balances and track usage |
 | Administrator | View and update account feature settings <br><br> View subscriptions in account <br><br> View offers in account <br><br> View and apply subscription and feature codes <br><br> View and change account name <br><br> View and update spending limits <br><br> Set spending notifications <br><br> View subscription balances and track usage <br><br> Create an enterprise |
 {: caption="Table 3. Roles and example actions for the Billing service" caption-side="top"}
 
