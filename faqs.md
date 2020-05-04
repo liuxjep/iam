@@ -6,7 +6,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-04-22"
+lastupdated: "2020-05-04"
 
 keywords: frequently asked question, faq
 
@@ -90,6 +90,16 @@ The account owner can update your access to any resource in the account, or you 
 {: faq}
 
 In the console, go to **Manage** > **Access (IAM)**, and select **Users**. Then, select your name or another user's name from the list. You can find the IAM ID for that user along with their email address on the User details page.
+
+## How do I find and manage API Keys for a user or myself?
+{: #iam-api-keys}
+{: faq}
+
+For information about the types of API keys that are available in {{site.data.keyword.cloud_notm}}, see [Understanding API keys](/docs/iam?topic=iam-manapikey). Go to **Manage > Access (IAM) > API keys** to view and manage API keys that you have access to.
+
+* For information about how to manage {{site.data.keyword.cloud_notm}} API keys that are associated with user identities, see [Managing user API keys](/docs/iam?topic=iam-userapikey).  
+* For information about how to manage API keys that are associated with a service ID, see [Managing service ID API keys](/docs/iam?topic=iam-serviceidapikeys).
+* For information about how to manage classic infrastructure API keys, see [Managing classic infrastructure API keys](/docs/iam?topic=iam-classic_keys).
 
 ## Why use resource groups and access groups?
 {: #resource-groups}
