@@ -64,6 +64,24 @@
     "allow a user to create a resource in a resource group",
     "users to create resources in resource groups"  
     ],
+  "iam-api-keys": [
+    "where do I find my API key and url",
+    "find my API keys",
+    "finding the api key",
+    "manage API keys",
+    "want to get a API key",
+    "do i get an ibm api key",
+    "What is my API key",
+    "get my URL and API Key",
+    "where is my api key",
+    "do I get API Keys",
+    "api key find it",
+    "secret key",
+    "want to generate API key",
+    "API key",
+    "cloud API key",
+    "need my api keys"    
+    ],
   "user-access":[
     "can I do as Administrator for IAM",
     "can I assign access to others",
