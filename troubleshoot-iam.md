@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-05-20"
 
 ---
 
@@ -133,3 +133,17 @@ The account is at the [limit of total number of policies allowed](/docs/iam?topi
 
 Reduce the number of policies on the account by following the [Best practices for assigning access](/docs/iam?topic=iam-account_setup#account_setup). For more information about policy limits for the account, see [IBM Cloud IAM limits](/docs/iam?topic=iam-iam_limits).
 {: tsResolve}
+
+## I can't manage a service ID that I created and previously had access to
+{: #troubleshoot-serviceid-access}
+{: troubleshoot}
+
+I don't have access to manage a service ID that I created in an account where I am not the owner. I received an error message about not having the required access, but I used to be able to manage it. 
+{: tsSymptoms}
+
+If you create a service ID in an account that you don't own, an administrator policy for that specific service ID is automatically generated for you only if you don't already have access to manage service IDs in the account. For example, if you are already assigned the Administrator role on the IAM Identity service, then a new policy is not automatically generated because you already have access. However, if the account administrator later revokes your access as an administrator on the IAM Identity service, then you can no longer manage the service IDs that you created in the account.
+{: tsCauses}
+
+Request the correct level of access from the account administrator to manage all service IDs in the account or just the specific ones that you created. 
+{: tsResolve}
+
