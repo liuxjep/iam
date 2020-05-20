@@ -4,7 +4,7 @@ copyright:
 
   years: 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-05-20"
 
 keywords: custom access, custom role, create a role, combine actions
 
@@ -47,7 +47,7 @@ Anyone can view the available roles in the account on Roles page, but to create,
 
 You can create new roles that are scoped to single services. This means that you can't combine actions for two different services in a custom role, but you can combine as many actions that you want into a new role for a single service. After you create a custom role with a name of your choosing, anyone in the account who can assign access to a particular service can use that role when assigning access.
 
-Custom roles can't be created for the all account management services or all IAM-enabled services options. 
+Custom roles can be created only for individual IAM-enabled services. A custom role can't be created for the options of `all account management services` or `all IAM-enabled services`. 
 {: note}
 
 1. In the {{site.data.keyword.cloud}} console, go to **Manage** > **Access (IAM)**, and select **Roles**.
