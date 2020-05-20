@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-01"
+lastupdated: "2019-05-20"
 
 keywords: IBM Cloud service APIs, IAM token, API key, authenticate with service API
 
@@ -67,7 +67,7 @@ As an example, the following steps assume that the API key is 0a1A2b3B4c5C6d7D8e
 ## Passing an {{site.data.keyword.Bluemix_notm}} IAM token to authenticate with a service's API
 {: #token_auth}
 
-To retrieve an IAM access token, the API client must first invoke an {{site.data.keyword.Bluemix_notm}} IAM API to authenticate and retrieve that token. The preferred way for {{site.data.keyword.Bluemix_notm}} service API clients is to use an IAM API key to get an IAM access token. The IAM access token can be used for multiple invocations of {{site.data.keyword.Bluemix_notm}} services that accept IAM access tokens as an authentication method. As IAM access tokens are digitally signed with asymmetric keys, {{site.data.keyword.Bluemix_notm}} services can validate an IAM access token without invoking any external service. This dramatically improves the performance of invoking an API.
+To retrieve an IAM access token, the API client must first invoke an {{site.data.keyword.Bluemix_notm}} IAM API to authenticate and retrieve that token. The preferred way for {{site.data.keyword.Bluemix_notm}} service API clients is to use an {{site.data.keyword.Bluemix_notm}} API key to get an IAM access token. The IAM access token can be used for multiple invocations of {{site.data.keyword.Bluemix_notm}} services that accept IAM access tokens as an authentication method. As IAM access tokens are digitally signed with asymmetric keys, {{site.data.keyword.Bluemix_notm}} services can validate an IAM access token without invoking any external service. This dramatically improves the performance of invoking an API.
 
 ![Authenticating with a service API by using an access token](images/tokenauth.svg "Retrieving a token from IAM by using an API key and passing the access token to target services to validate credentials"){: caption="Figure 2. Retrieving a token from IAM by using an API key and passing the access token to target services to validate credentials" caption-side="bottom"}
 
