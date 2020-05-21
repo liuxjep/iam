@@ -20,9 +20,6 @@ Managing identity and access
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    login_fedid.md
-    connect_dedicated_id.md
-
     {: .topicgroup}
     Administering users
         iamuserinv.md
@@ -49,12 +46,16 @@ Managing identity and access
         assign-enterprise-access.md
 
     {: .topicgroup}
-    Multifactor authentication
+    Managing authentication options
+        login_fedid.md
+        idp-integration.md
         mfatypes.md
         mfa.md
         totp.md
         external_mfa.md
         securityquestions.md
+        connect_dedicated_id.md
+        saml-federation.md
 
     {: .topicgroup}
     Working with services

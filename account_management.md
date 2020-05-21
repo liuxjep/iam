@@ -4,7 +4,7 @@ copyright:
 
   years: 2019, 2020
 
-lastupdated: "2020-05-04"
+lastupdated: "2020-05-21"
 
 keywords: account management, access, access policy, account administrator, user management, account management services, use account management services to grant users in the account access to invite users to the account, billing service, support center service, identity service, global catalog service, enterprise service, license service, entitlement service, license and entitlement service, role management service, catalog management service
 
@@ -33,7 +33,7 @@ As the account owner or the administrator of an account management service, you 
 
 To assign access to one or all account management services, complete the following steps:
 
-1. From the {{site.data.keyword.cloud}} console, click **Manage** > **Access (IAM)**, and then select **Users**.
+1. In the {{site.data.keyword.cloud}} console, click **Manage** > **Access (IAM)**, and then select **Users**.
 2. From the row for the user that you want to assign access, select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and click **Assign access**.
 3. Select **Assign users additional access**, and select **Account Management**.
 4. For the access, select **All Account Management Services** or select a specific account management service.
@@ -190,17 +190,18 @@ You can give users access to view private services in the catalog or change the 
 | Administrator | Change object metadata or visibility for private services, and restrict visibility of a public service |
 {: caption="Table 6. Roles and example actions for the Global Catalog service" caption-side="top"}
 
+
 ### IAM identity service
 {: #identity-service-account-management}
 
-You can give users access to manage service IDs by using the IAM identity service. For the IAM identity service, these actions apply to service IDs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies. This account management service applies to the ability to view, update, delete, and assign access to service IDs in the account created by other users.
+You can give users access to manage service IDs and Identity Providers (IDPs) by using the IAM identity service. For the IAM identity service, these actions apply to service IDs and IDPs within the account that the user didn't create. All users can create service IDs. They are the administrator for those IDs, and they can create the associated API key and access policies, but only users with the Operator and Administrator role can create IDPs. This account management service applies to the ability to view, update, delete, and assign access to service IDs in the account created by other users.
 
 | Roles         | Actions                                                                                           |
 |---------------|----------------------------------------------------------------------------------------------------|
 | Viewer        | View IDs              |
-| Operator      | Create and delete IDs and API keys <br>        |
-| Editor        | Create, update, and delete IDs and API keys       |
-| Administrator | Create, update, and delete IDs and API keys <br><br> Assign access policies to IDs  |
+| Operator      | Create and delete IDs and API keys <br><br> View, create, update, and delete IDPs          |
+| Editor        | Create, update, and delete IDs and API keys <br><br> View and update IDPs       |
+| Administrator | Create, update, and delete IDs and API keys <br><br> Assign access policies to IDs <br><br> View, create, update, and delete IDPs |
 {: caption="Table 7. Roles and example actions for the IAM Identity service" caption-side="top"}
 {: #identity-service-acct-mgmt}
 
@@ -275,3 +276,21 @@ To quickly give users a wide-ranging set of account management access, you can a
 | Editor        | All editor role actions for the account management services and the ability to create resource groups        |
 | Administrator | All administrator role actions for the account management services and the ability to create resource groups |
 {: caption="Table 12. Roles and example actions for a policy on all identity and access services" caption-side="top"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
