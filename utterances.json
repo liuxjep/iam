@@ -192,6 +192,14 @@
      "billing and support permissions in my SoftLayer account management",
      "migrated permissions access management"
       ],
+    "total-policies": [	
+      "how many policies do I have in my account",
+      "check how many policies are in this account",
+      "how many policies do I have",
+      "total number of policies per account",
+      "total of a specific type of policies per account",
+	  "limit for policies within an account"
+	  ],	  
   "troubleshoot-serviceaccess":[   
      "can't access a resource from the Resource list page",
      "cant access the services on the Resource list",
@@ -235,5 +243,12 @@
      "422: Exceeded maximum policies quota error",
      "error 422 exceeded maximum policies",
      "limit of total number of policies allowed"
-    ]
+    ],
+	"troubleshoot-serviceid-access": [
+	  "don't have access to manage a service ID I created",
+	  "can't update a service id i created",
+	  "unable to change a service id",
+	  "trying to update a service id and getting an error",
+	  "not access a service id"
+	]
  }
