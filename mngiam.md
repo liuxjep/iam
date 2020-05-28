@@ -40,7 +40,7 @@ To manage access or assign new access for users by using IAM policies, you must 
 5. Edit the policy.
 6. Click **Save**.
 
-To update a user policy by using the CLI, you can use the [**`ibmcloud iam user-policy-update`**](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_update) command.
+To update a user policy by using the CLI, you can use the [**`ibmcloud iam user-policy-update`**](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_update) command.
 ```
 ibmcloud iam user-policy-update USER_NAME POLICY_ID [-v, --version VERSION] {-f, --file JSON_FILE | [--roles ROLE_NAME1,ROLE_NAME2...] [--service-name SERVICE_NAME] [--service-instance SERVICE_INSTANCE] [--region REGION] [--resource-type RESOURCE_TYPE] [--resource RESOURCE] [--resource-group-name RESOURCE_GROUP_NAME] [--resource-group-id RESOURCE_GROUP_ID]}
 ```
@@ -101,7 +101,7 @@ If the user doesn't have a role on the resource group that contains the resource
 You can also remove users from access groups by selecting the check box of the user you want to remove and click **Remove**. Then click **Remove** again to approve the process. 
 {: tip}
 
-To remove a user policy by using the CLI, you can use the [**`ibmcloud iam user-policy-delete`**](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_delete) command.
+To remove a user policy by using the CLI, you can use the [**`ibmcloud iam user-policy-delete`**](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_delete) command.
 ```
 ibmcloud iam user-policy-delete USER_ID POLICY_ID [-f, --force]
 ```
