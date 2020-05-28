@@ -57,7 +57,7 @@ ibmcloud iam access-group-policy Public Access -f @policy.json
 ```
 {: pre}
 
-For more information about the command options, see [`ibmcloud iam access-group-policy-create`](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create).
+For more information about the command options, see [`ibmcloud iam access-group-policy-create`](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_access_group_policy_create).
 
 ### Assigning access by using the API
 {: #public-access-api}
