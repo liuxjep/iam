@@ -45,7 +45,7 @@ To grant another user full access to the account for the purposes of managing us
 
 ### Using the CLI to assign access
 
-To assign access, run the `user-policy-create` command. For more information, see [ibmcloud iam user-policy-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create). The following example command assigns a policy with the Administrator role for the Access groups account management service.
+To assign access, run the `user-policy-create` command. For more information, see [ibmcloud iam user-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create). The following example command assigns a policy with the Administrator role for the Access groups account management service.
 
 ```
 ibmcloud iam user-policy-create USER_NAME --roles administrator --service-name iam-groups
