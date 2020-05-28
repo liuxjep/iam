@@ -33,7 +33,7 @@ You can identify the caller in one of the following ways:
 
 The API keys are credentials that consist of a long series of random characters or numbers. An {{site.data.keyword.Bluemix_notm}} identity can have multiple API keys. Each of these API keys can be managed independently, meaning if this API key is used by your service only, you can delete the API key without disrupting some other component.
 
-You can use API keys to [log in to the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI)](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_cli#ibmcloud_login) or to [generate IAM tokens](/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey). While it is not recommended for production use, you can also send API keys to {{site.data.keyword.Bluemix_notm}} services.
+You can use API keys to [log in to the {{site.data.keyword.Bluemix_notm}} command-line interface (CLI)](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_login) or to [generate IAM tokens](/docs/iam?topic=iam-iamtoken_from_apikey#iamtoken_from_apikey). While it is not recommended for production use, you can also send API keys to {{site.data.keyword.Bluemix_notm}} services.
 
 ## Passing an {{site.data.keyword.Bluemix_notm}} API key to authenticate with a service API
 {: #apikey_auth}
