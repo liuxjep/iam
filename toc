@@ -79,7 +79,7 @@ Managing identity and access
     iam_limits.md
     monitoring.md
     userstatus.md
-    [Command reference](/cli/reference/ibmcloud/cloud-cli-ibmcloud_commands_iam)
+    [Command reference](/cli/reference/ibmcloud/cli-ibmcloud_commands_iam)
 
     {: .topicgroup}
     API reference
