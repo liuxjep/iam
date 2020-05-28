@@ -124,7 +124,7 @@ Create a user policy:
 $ ibmcloud iam user-policy-create name@example.com -f policy.json
 ```
 
-For more information, see [ibmcloud iam user-policy-create](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create).
+For more information, see [ibmcloud iam user-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_user_policy_create).
 
 ## Assigning access by using the API
 {: #enterprise-api-policy}
