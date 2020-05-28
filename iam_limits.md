@@ -49,7 +49,7 @@ If you aren't sure how many policies are in your account, and you want to ensure
 
 To get the total number of policies per account, you can use the [IAM Policy Management API](/apidocs/iam-policy-management#get-policies-by-attributes):
 
-1. Log in to [IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started):
+1. Log in to [IBM Cloud CLI](/docs/cli?topic=cli-getting-started):
 2. Generate your IAM access token: 
     ```
        ibmcloud iam oauth-tokens
@@ -71,7 +71,7 @@ In the following example output the last line displays the total number of polic
 ### Getting the total of a specific type of policies per account
 {: #total-policies-by-type}
 
-To get the total number of policies for a specific subject, you can use the [IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started):
+To get the total number of policies for a specific subject, you can use the [IBM Cloud CLI](/docs/cli?topic=cli-getting-started):
 
 Log in, and select your account to run the appropiate CLI command. You might want to install `jq` to format JSON in the CLI output.
   
