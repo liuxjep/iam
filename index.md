@@ -124,7 +124,7 @@ You can require multifactor authentication (MFA) for every user in the account o
 You can access and use {{site.data.keyword.Bluemix_notm}} IAM through the Access (IAM) UI, CLI, or API.
 
 * To access {{site.data.keyword.Bluemix_notm}} IAM by using the console, go to **Manage** &gt; **Access (IAM)**.
-* Go to [Managing IAM access, API keys, service IDs, and access groups](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_iam) to review the available CLI commands.
+* Go to [Managing IAM access, API keys, service IDs, and access groups](/docs/cli?topic=cli-ibmcloud_commands_iam) to review the available CLI commands.
 * Go to the following API docs to review the available APIs:
     * [IAM Identity Services API](https://{DomainName}/apidocs/iam-identity-token-api){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
     * [IAM Access Groups API](https://{DomainName}/apidocs/iam-access-groups){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
