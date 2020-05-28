@@ -60,7 +60,7 @@ The following sample uses mock data to create a policy where a specific source s
 ibmcloud iam authorization-policy-create cloud-object-storage kms Reader --source-service-instance-id 123123 --target-service-instance-id 456456
 ```
 
-For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cloud-cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
+For more information about all of the parameters that are available for this command, see [ibmcloud iam authorization-policy-create](/docs/cli?topic=cli-ibmcloud_commands_iam#ibmcloud_iam_authorization_policy_create).
 
 ### Creating an authorization by using the API
 {: #auth-api}
