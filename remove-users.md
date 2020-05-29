@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-05-28"
 
 keywords: remove user, delete user
 
@@ -17,6 +17,7 @@ subcollection: iam
 {:screen: .screen}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:note: .note}
 
 # Removing users from an account
 {: #remove}
@@ -28,6 +29,9 @@ Only account owners or users with the following access can remove users from an 
 
 * An Identity and access management (IAM) policy for the User management account management service with the Administrator role assigned and be the Cloud Foundry org manager if the user belongs to a Cloud Foundry org.
 * If you have classic infrastructure in your account, a user must have an IAM policy for the User management account management service with the Administrator role assigned, be the Cloud Foundry org manager if the user belongs to a Cloud Foundry org, and be an ancestor of the user in the classic infrastructure user hierarchy with the Manage user classic infrastructure permission assigned.
+
+Only users with the correct access can remove others. If you use a service ID to authenticate, you can't remove users from the account.
+{: note}
 
 To remove a user from an account, complete the following steps:
 
