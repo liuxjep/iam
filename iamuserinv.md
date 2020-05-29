@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-05-28"
 
 keywords: invite, invite users, invitation access, vpn-only user
 
@@ -31,7 +31,7 @@ Use {{site.data.keyword.Bluemix}} Identity and Access Management (IAM) to invite
 ## Before you begin
 {: #invite-access}
 
-To invite users and manage outstanding invitations, you must have at least one of the following types of access:
+To invite users and manage outstanding invitations, you must have at least one of the following types of access. Only users can invite others. If you use a service ID to authenticate, you can't invite new users to the account.
 
 * Account owner
 * Cloud Foundry organization manager
