@@ -44,7 +44,7 @@ When you create a classic infrastructure API key, you can use the IP address res
 
 To get the details of a classic infrastructure API key after you create it, click the **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu. You can copy the API key value.
 
-To get the details including the user name of a classic infrastructure API key after you create it, go to **Manage** > **Access (IAM)** > **Users**, then select the user's name. From the API keys sections, select **View details** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu in the row for the classic infrastructure API key row  **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu. You can copy the API key value or get your API user name, which is also called your classic infrastructure user name.
+To get the details including the user name of a classic infrastructure API key after you create it, go to **Manage** > **Access (IAM)** > **Users**, then select the user's name. From the API keys section, select **View details** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu in the row for the classic infrastructure API key row. You can copy the API key value or get your API user name, which is also called your classic infrastructure user name.
 {: tip}
      
 To delete a classic infrastructure API key, select **Delete** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu on the row for the API key in the API keys section.
