@@ -3,7 +3,7 @@
 copyright:
 
   years: 2018, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-06-15"
 
 keywords: classic infrastructure API keys, classic infrastructure API, SoftLayer API key
 
@@ -42,7 +42,9 @@ When you create a classic infrastructure API key, you can use the IP address res
    {: note}
 3. Copy or download the API key, and save it in a safe place. You can retrieve the details of the API key later.
 
-To get the details of a classic infrastructure API key after you create it, click the **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu. You can copy the API key value or get your API username, which is also called your classic infrastructure username.
+To get the details of a classic infrastructure API key after you create it, click the **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu. You can copy the API key value.
+
+To get the details including the user name of a classic infrastructure API key after you create it, go to **Manage** > **Access (IAM)** > **Users**, then select the user's name. From the API keys sections, select **View details** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu in the row for the classic infrastructure API key row  **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu. You can copy the API key value or get your API user name, which is also called your classic infrastructure user name.
 {: tip}
      
 To delete a classic infrastructure API key, select **Delete** from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu on the row for the API key in the API keys section.
@@ -56,5 +58,4 @@ Only users who create the API key can retrieve the API key value after it's crea
 {: note}
 
 In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Access (IAM)** > **API keys**, and select **Classic infrastructure API keys**. Then, select the action that you want to perform from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, whether it's to view the details or delete the API key.
-
 
