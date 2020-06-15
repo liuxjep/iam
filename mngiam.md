@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2020
 
-lastupdated: "2020-04-16"
+lastupdated: "2020-06-15"
 
 keywords: resource access, assign access, IAM access policy, access to resource groups, edit access, remove access 
 
@@ -92,6 +92,8 @@ If the user doesn't have a role on the resource group that contains the resource
 
 ## Removing access
 {: #removing_access}
+
+Removing access for a user or service ID can take up to 10 minutes to take effect.
 
 1. In the console, click **Manage** > **Access (IAM)**, and select **Users**.
 2. Select the user name that you want to remove access for.
